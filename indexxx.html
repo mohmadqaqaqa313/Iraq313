@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموسوعة العقائدية الذهبية | بوابة الأقسام</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700;900&family=Reem+Kufi:wght@400;700&family=Noto+Kufi+Arabic:wght@300;400;600;700;900&family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ========== التصميم الفخم المحسّن ========== */
+        :root {
+            --gold-primary: #FFD700;
+            --gold-rich: #CFAF4E;
+            --gold-deep: #996515;
+            --gold-light: #F5E6B2;
+            --gold-bright: #FFE55C;
+            --gold-shadow: #B8860B;
+            --bg-richest: #0A0501;
+            --bg-velvet: #1A1107;
+            --bg-ebony: #0F0A04;
+            --bg-onyx: #1E150B;
+            --border-royal: rgba(212, 175, 55, 0.4);
+            --border-premium: rgba(255, 215, 0, 0.25);
+            --text-luxury: #F8F0E0;
+            --text-golden: #FFECB3;
+            --text-amber: #F0B90B;
+            --ai-primary: #00D4FF;
+            --ai-deep: #0088B0;
+            --ai-glow: rgba(0, 212, 255, 0.3);
+            --ai-glow-strong: rgba(0, 212, 255, 0.6);
+            --gradient-royal: linear-gradient(135deg, #0F0801 0%, #2A1C0A 50%, #0F0801 100%);
+            --gradient-golden: linear-gradient(135deg, #FFD700 0%, #B8860B 50%, #8B691B 100%);
+            --gradient-ai: linear-gradient(135deg, #00D4FF 0%, #006688 100%);
+            --shadow-luxury: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(212, 175, 55, 0.1) inset;
+            --shadow-royal: 0 15px 30px -8px #000000, 0 0 0 1px #D4AF37 inset;
+            --shadow-golden: 0 5px 20px rgba(255, 215, 0, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg-richest);
+            color: var(--text-luxury);
+            font-family: 'Tajawal', 'Noto Kufi Arabic', sans-serif;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 30%),
+                radial-gradient(circle at 90% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 30%),
+                repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.02) 0px, rgba(212, 175, 55, 0.02) 1px, transparent 1px, transparent 15px);
+            line-height: 1.8;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><path d="M20,20 L30,10 L40,20 L50,5 L60,20 L70,10 L80,20" stroke="%23D4AF37" fill="none" stroke-width="0.5"/><circle cx="30" cy="40" r="3" fill="%23D4AF37"/><circle cx="70" cy="60" r="3" fill="%23D4AF37"/><path d="M40,70 Q50,60 60,70" stroke="%23D4AF37" fill="none" stroke-width="0.8"/></svg>');
+            background-repeat: repeat;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* شريط التقدم الفاخر */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to left, var(--gold-primary), #FFFFFF, var(--gold-deep));
+            width: 0%;
+            z-index: 10000;
+            box-shadow: 0 0 20px var(--gold-primary);
+            transition: width 0.1s ease;
+        }
+
+        /* ===== البوابة الرئيسية (بطاقات الأقسام) ===== */
+        .portal-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+        }
+
+        .portal-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .portal-header h1 {
+            font-family: 'Amiri', serif;
+            font-size: 4rem;
+            background: linear-gradient(135deg, #FFF8E0, #FFD700, #FDB931, #8B691B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .portal-header p {
+            font-size: 1.5rem;
+            color: var(--text-golden);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 2;
+            background: rgba(0,0,0,0.3);
+            padding: 20px 30px;
+            border-radius: 60px;
+            border: 1px solid rgba(255,215,0,0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .portal-card {
+            background: linear-gradient(145deg, #1A1207, #0F0A04);
+            border: 2px solid transparent;
+            border-image: linear-gradient(145deg, var(--gold-primary), var(--gold-deep), rgba(212, 175, 55, 0.1)) 1;
+            border-radius: 40px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-luxury);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .portal-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-10px);
+            border-image: linear-gradient(145deg, var(--gold-bright), var(--gold-primary), var(--gold-deep)) 1;
+            box-shadow: 0 30px 60px -10px #000000, 0 0 0 2px rgba(255, 215, 0, 0.3) inset;
+        }
+
+        .portal-icon {
+            font-size: 4rem;
+            color: var(--gold-primary);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 0 20px var(--gold-primary);
+        }
+
+        .portal-title {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            color: var(--text-golden);
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+        }
+
+        .portal-desc {
+            font-size: 1.1rem;
+            color: #aaa;
+            position: relative;
+            z-index: 1;
+            line-height: 1.6;
+        }
+
+        /* ===== وضع عرض القسم المنعزل ===== */
+        .section-view {
+            display: none;
+            padding: 30px 6% 80px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .section-view.active {
+            display: block;
+            animation: royalAppear 0.8s ease forwards;
+        }
+
+        @keyframes royalAppear {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(145deg, var(--gold-rich), var(--gold-deep));
+            color: #000;
+            font-weight: 900;
+            padding: 12px 30px;
+            border-radius: 60px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: 2px solid var(--gold-light);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            width: fit-content;
+        }
+
+        .back-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.6);
+        }
+
+        .back-button i {
+            font-size: 1.2rem;
+        }
+
+        /* باقي التصميمات (البطاقات، صناديق الروايات، إلخ) */
+        .issue-card {
+            background: linear-gradient(145deg, #1A1207, #0F0A04);
+            border: 1px solid;
+            border-image: linear-gradient(145deg, var(--gold-primary), var(--gold-deep), rgba(212, 175, 55, 0.1)) 1;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            box-shadow: var(--shadow-luxury);
+            position: relative;
+        }
+
+        .issue-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), var(--gold-deep), transparent);
+            opacity: 0.5;
+        }
+
+        .issue-card:hover {
+            transform: translateY(-5px);
+            border-image: linear-gradient(145deg, var(--gold-bright), var(--gold-primary), var(--gold-deep)) 1;
+            box-shadow: 0 20px 50px -10px #000000, 0 0 0 2px rgba(255, 215, 0, 0.2) inset;
+        }
+
+        .card-header {
+            padding: 25px 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        .card-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.7rem;
+            color: var(--text-golden);
+            border-right: 6px solid;
+            border-image: linear-gradient(180deg, var(--gold-primary), var(--gold-deep)) 1;
+            padding-right: 25px;
+            flex: 1;
+            line-height: 1.5;
+            font-weight: 700;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .expand-icon {
+            color: var(--gold-primary);
+            font-size: 1.4rem;
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            min-width: 30px;
+            text-align: center;
+            background: rgba(212, 175, 55, 0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .issue-card.open .expand-icon {
+            transform: rotate(180deg);
+            background: rgba(212, 175, 55, 0.2);
+        }
+
+        .answer-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .issue-card.open .answer-body {
+            max-height: 5000px;
+        }
+
+        .answer-inner {
+            padding: 30px 40px 60px;
+            border-top: 2px solid;
+            border-image: linear-gradient(90deg, transparent, var(--gold-primary), var(--gold-deep), transparent) 1;
+        }
+
+        .narration-box {
+            margin: 20px 35px;
+            padding: 30px;
+            background: linear-gradient(145deg, #221A0F, #161009);
+            border-radius: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-right: 8px solid;
+            border-image: linear-gradient(180deg, var(--gold-primary), var(--gold-deep)) 1;
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            color: #F5DEB3;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7), 0 0 0 1px rgba(255, 215, 0, 0.1) inset;
+            position: relative;
+        }
+
+        .narration-box::before {
+            content: "❝";
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            font-size: 5rem;
+            color: var(--gold-primary);
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Amiri', serif;
+            font-size: 3rem;
+            color: var(--gold-primary);
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), var(--gold-deep), var(--gold-primary), transparent);
+        }
+
+        .section-title::after {
+            content: "✦✦✦";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold-primary);
+            font-size: 1rem;
+            letter-spacing: 10px;
+        }
+
+        .signature {
+            margin-top: 45px;
+            text-align: left;
+            font-family: 'Amiri', serif;
+            color: var(--gold-primary);
+            font-size: 1.5rem;
+            border-top: 2px dashed rgba(212, 175, 55, 0.3);
+            padding-top: 25px;
+            position: relative;
+        }
+
+        .signature::before {
+            content: "⚘";
+            position: absolute;
+            right: 0;
+            top: -15px;
+            font-size: 2rem;
+            color: var(--gold-primary);
+        }
+
+        .ref-tag {
+            display: inline-block;
+            margin-top: 35px;
+            color: #000;
+            font-family: 'Amiri', serif;
+            padding: 10px 30px;
+            background: linear-gradient(145deg, var(--gold-primary), var(--gold-deep));
+            border: none;
+            border-radius: 40px;
+            font-weight: 900;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .ai-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .ai-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .ai-badge {
+            display: inline-block;
+            background: linear-gradient(145deg, var(--ai-primary), var(--ai-deep));
+            color: #000;
+            font-weight: 900;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px var(--ai-glow);
+        }
+
+        .ai-header h2 {
+            font-family: 'Amiri', serif;
+            font-size: 3rem;
+            background: linear-gradient(135deg, #00D4FF, #0088B0, #00FFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .ai-chat-container {
+            background: linear-gradient(145deg, #1A1207, #0F0A04);
+            border: 2px solid;
+            border-image: linear-gradient(145deg, var(--ai-primary), var(--ai-deep)) 1;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .ai-messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .message {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            animation: messageAppear 0.3s ease;
+        }
+
+        @keyframes messageAppear {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        .message.user .message-avatar {
+            background: linear-gradient(145deg, var(--gold-primary), var(--gold-deep));
+            color: #000;
+        }
+
+        .message.ai .message-avatar {
+            background: linear-gradient(145deg, var(--ai-primary), var(--ai-deep));
+            color: #000;
+        }
+
+        .message-content {
+            flex: 1;
+            padding: 15px 25px;
+            border-radius: 25px;
+            max-width: 80%;
+            background: linear-gradient(145deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .message.ai .message-content {
+            background: linear-gradient(145deg, rgba(0, 212, 255, 0.1), rgba(0, 136, 176, 0.05));
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .message-content p {
+            margin: 0;
+            color: var(--text-luxury);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .message-time {
+            font-size: 0.75rem;
+            color: #aaa;
+            margin-top: 5px;
+            text-align: left;
+        }
+
+        .message-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: flex-end;
+        }
+
+        .message-action-btn {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--ai-primary);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .message-action-btn:hover {
+            background: var(--ai-primary);
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .ai-suggestions-live {
+            background: linear-gradient(145deg, rgba(0, 212, 255, 0.15), rgba(0, 136, 176, 0.1));
+            padding: 12px 25px;
+            margin: 0 20px 20px;
+            border-radius: 60px;
+            border: 1px solid var(--ai-primary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--ai-primary);
+            font-size: 1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .ai-input-area {
+            padding: 25px;
+            border-top: 2px solid;
+            border-image: linear-gradient(90deg, transparent, var(--ai-primary), var(--ai-deep), transparent) 1;
+        }
+
+        .ai-input-wrapper {
+            display: flex;
+            gap: 15px;
+        }
+
+        .ai-input-wrapper input {
+            flex: 1;
+            padding: 18px 25px;
+            border-radius: 60px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid;
+            border-image: linear-gradient(45deg, var(--ai-primary), var(--ai-deep)) 1;
+            color: var(--text-luxury);
+            font-size: 1.1rem;
+            outline: none;
+        }
+
+        .ai-input-wrapper input:focus {
+            border-image: linear-gradient(45deg, #FFF, var(--ai-primary), #FFF) 1;
+            box-shadow: 0 0 20px var(--ai-glow);
+        }
+
+        .ai-input-wrapper button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, var(--ai-primary), var(--ai-deep));
+            border: none;
+            color: #000;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px var(--ai-glow);
+        }
+
+        .ai-input-wrapper button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px var(--ai-glow);
+        }
+
+        .ai-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .ai-suggestion-chip {
+            padding: 8px 18px;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 50px;
+            color: var(--ai-primary);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .ai-suggestion-chip:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--ai-glow);
+        }
+
+        .ai-thinking {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 50px;
+            color: var(--ai-primary);
+            border: 1px solid var(--ai-primary);
+        }
+
+        .copy-notification {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(145deg, var(--ai-primary), var(--ai-deep));
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 60px;
+            font-weight: 900;
+            z-index: 10000;
+            box-shadow: 0 0 30px var(--ai-glow);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { bottom: 0; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+
+        .search-area {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .search-area input {
+            width: 100%;
+            padding: 22px 70px 22px 30px;
+            border-radius: 60px;
+            background: rgba(20, 15, 5, 0.9);
+            border: 2px solid;
+            border-image: linear-gradient(45deg, var(--gold-primary), var(--gold-deep), var(--gold-primary)) 1;
+            color: var(--text-luxury);
+            font-size: 1.2rem;
+            outline: none;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-area i {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-primary);
+            font-size: 1.6rem;
+            text-shadow: 0 0 15px var(--gold-primary);
+        }
+
+        .elegant-placeholder {
+            text-align: center;
+            padding: 80px 30px;
+            background: linear-gradient(145deg, #1F170D, #130E07);
+            border-radius: 50px;
+            border: 2px dashed;
+            border-image: linear-gradient(145deg, var(--gold-primary), var(--gold-deep)) 1;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .placeholder-icon {
+            font-size: 8rem;
+            color: var(--gold-primary);
+            opacity: 0.4;
+            margin-bottom: 30px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .placeholder-title {
+            font-family: 'Amiri', serif;
+            font-size: 3rem;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+        }
+
+        .placeholder-text {
+            font-size: 1.3rem;
+            color: var(--text-golden);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 2;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Amiri', serif;
+            font-size: clamp(3rem, 10vw, 6rem);
+            background: linear-gradient(135deg, #FFF8E0, #FFD700, #FDB931, #8B691B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: var(--text-golden);
+            max-width: 800px;
+            margin: 30px auto 50px;
+            line-height: 2;
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .hero button {
+            padding: 20px 70px;
+            background: linear-gradient(145deg, #FFD700, #B8860B, #8B691B);
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            font-weight: 900;
+            color: #000;
+            font-size: 1.3rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            border: 1px solid var(--gold-light);
+        }
+
+        .hero button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 2px solid;
+            border-image: linear-gradient(90deg, transparent, var(--gold-primary), var(--gold-deep), var(--gold-primary), transparent) 1;
+            color: var(--text-golden);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- ===== البوابة الرئيسية (صفحة اختيار الأقسام) ===== -->
+<div id="portal" class="portal-container">
+    <div class="portal-header">
+        <h1>الموسوعة العقائدية الذهبية</h1>
+        <p>اختر أحد الباحثين لاستعراض بحوثه ومسائله العقائدية المحققة</p>
+    </div>
+    <div class="portal-grid">
+        <div class="portal-card" onclick="showSection('home')">
+            <i class="fas fa-home portal-icon"></i>
+            <div class="portal-title">الرئيسية</div>
+            <div class="portal-desc">الصفحة الرئيسية للموسوعة</div>
+        </div>
+        <div class="portal-card" onclick="showSection('abotalbat')">
+            <i class="fas fa-user-graduate portal-icon"></i>
+            <div class="portal-title">الباحث أبو الطيبات</div>
+            <div class="portal-desc">المسائل التسع الكبرى في التوحيد والتفويض</div>
+        </div>
+        <div class="portal-card" onclick="showSection('abotalbat2')">
+            <i class="fas fa-user-astronaut portal-icon"></i>
+            <div class="portal-title">الباحث أبو الطيبات 2</div>
+            <div class="portal-desc">الرد على أمير القريشي في التفويض</div>
+        </div>
+        <div class="portal-card" onclick="showSection('abotalbat3')">
+            <i class="fas fa-hand-sparkles portal-icon"></i>
+            <div class="portal-title">الباحث أبو الطيبات 3</div>
+            <div class="portal-desc">يد الله بين التنزيه والتفويض</div>
+        </div>
+        <div class="portal-card" onclick="showSection('abomogtahid')">
+            <i class="fas fa-moon portal-icon"></i>
+            <div class="portal-title">الباحث المتهجد</div>
+            <div class="portal-desc">بحوث في المناجاة والتهجد (قيد الإعداد)</div>
+        </div>
+        <div class="portal-card" onclick="showSection('mohamedalmahdi')">
+            <i class="fas fa-scroll portal-icon"></i>
+            <div class="portal-title">محمد المهدي الموسوي</div>
+            <div class="portal-desc">رسالة كشف القناع في خلق الاستحالة</div>
+        </div>
+        <div class="portal-card" onclick="showSection('ai')">
+            <i class="fas fa-robot portal-icon" style="color: var(--ai-primary); text-shadow: 0 0 20px var(--ai-primary);"></i>
+            <div class="portal-title">الذكاء الاصطناعي</div>
+            <div class="portal-desc">الباحث الذكي أبو الطيبات AI</div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== أقسام الموسوعة المنعزلة ===== -->
+
+<!-- الصفحة الرئيسية -->
+<section id="home" class="section-view">
+    <div class="back-button" onclick="showPortal()">
+        <i class="fas fa-arrow-right"></i> العودة إلى البوابة
+    </div>
+    <div class="hero">
+        <h1>منصة الردود العقائدية</h1>
+        <p>موسوعة محققة بالأدلة القاطعة لتفكيك شبهات المفوضة وبيان توحيد آل محمد عليهم السلام. درر علمية ونفائس عقدية من بحر علوم آل البيت الأطهار.</p>
+        <button onclick="showSection('ai')">🗣️ تحدث مع الذكاء الاصطناعي المتطور</button>
+    </div>
+</section>
+
+<!-- ========== قسم الباحث أبو الطيبات (المسائل التسع كاملة) ========== -->
+<section id="abotalbat" class="section-view">
+    <div class="back-button" onclick="showPortal()">
+        <i class="fas fa-arrow-right"></i> العودة إلى البوابة
+    </div>
+    <div class="search-area">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="ابحث في أبحاث أبو الطيبات..." onkeyup="runSearch(this.value)">
+    </div>
+    <h2 class="section-title">بحوث ومحاججات أبو الطيبات</h2>
+    <div id="main-list">
+
+        <!-- المسألة 1 -->
+        <div class="issue-card">
+            <div class="card-header" onclick="toggleCard(this.parentElement)">
+                <h2 class="card-title">إثبات أن الله هو الأحد المتفرد بخلق كل شيء وكل شيء من صنعه</h2>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="answer-body">
+                <div class="answer-inner">
+                    <span class="label-gold"><i class="fas fa-crown"></i> تحقيق المسألة</span>
+                    <p>في هذا البحث نقرر أصلا عظيما من أصول التوحيد وهو أن الله عز وجل خالق كل شيء وأن كل ما سواه مخلوق مصنوع داخل تحت قدرته وسلطانه كما ورد في الحديث في الكافي الشريف</p>
+                    <div class="narration-box">«يا عيسى انا ربك ورب آبائك اسمي واحد وانا الأحد المتفرد بخلق كل شيء وكل شيء من صنعي وكل الي راجعون»</div>
+                    <p>فدلت هذه الكلمة الجامعة على انفراده سبحانه بالخلق والتدبير وأن كل ما عداه راجع إليه حدوثا.</p>
+                    <p>وقبل الخوض في تفصيل الأدلة نثبت قاعدة كلية دل عليها النقل وهي أن لا يكون الشيء لا من شيء إلا الله عز وجل فعن الإمام الصادق عليه السلام</p>
+                    <div class="narration-box">«في الربوبية العظمى والالهية الكبرى لا يكون الشيء لا من شيء الا الله ولا ينقل الشيء من جوهريته الى جوهر اخر الا الله»</div>
+                    <p>فصرح عليه السلام بأن الإيجاد لا من شيء من خصائص الربوبية والالوهية ولا خالق على الحقيقة سواه.</p>
+                    <p>ثم نأتي إلى النصوص الصريحة في أن الله تعالى أوجد الأشياء لا من مادة سابقة ولا من مثال محتذى ففي الخطبة الفدكية لسيدة نساء العالمين عليها السلام <span class="highlight">«دَعَ الأَشَياءَ لا مِنْ شَيْءٍ كانَ قَبْلَها وَأَنْشَأَها بِلا احْتِذاءِ أَمْثِلَةٍ امْتَثَلَها كَوَّنَها بِقُدْرَتِهِ وَذَرَأَها بِمَشِيَّتِهِ مِنْ غَيْرِ حاجَةٍ مِنْهُ إلى تَكْوينِها وَلا فائِدَةٍ لَهُ في تَصْويرِها إِلاّ تَثْبيتاً لِحِكْمَتِهِ وَتَنْبيهاً عَلى طاعَتِهِ وَإظْهاراً لِقُدْرَتِهِ»</span></p>
+                    <p>فالكلام نص في نفي المادة السابقة ونفي المثال المتقدم وإثبات أن الإيجاد كان محضا بمشيئته وقدرته لا لحاجة ولا لغرض يعود إليه تعالى بل إظهارا لحكمته وربوبيته.</p>
+                    <p>وعن أمير المؤمنين عليه السلام في خطبة له <span class="highlight">«الحمد لله الواحد الاحد الفرد الصمد الذي لا من شيء كان ولا من شيء خلق ما كان»</span></p>
+                    <p>فجمع بين نفي المبدأ عنه سبحانه ونفي المادة في خلقه لما سواه فكما أنه لم يكن مسبوقا بعدم ولا معلولا لغيره كذلك لم يخلق الخلق من أصل قائم بذاته بل أوجده إيجادا.</p>
+                    <p>وعن الإمام عليه السلام <span class="highlight">«الحمد لله فاطر الأشياء إنشاءاً ومبتدعها ابتداعاً بقدرته وحكمته لا من شيء فيبطل الاختراع ولا لعلة فلا يصح الابتداع خلق ما شاء كيف شاء متوحداً بذلك لإظهار حكمته وحقيقة ربوبيته»</span></p>
+                    <p>ففي هذا البيان إبطال لقول من توهم مادة أزلية لأن الاختراع لا يكون إلا مع نفي الأصل السابق ونفي العلة الملزمة.</p>
+                    <p>فثبت بالنصوص المأثورة عن العترة الطاهرة عليهم السلام أن الله عز وجل هو المبدئ المخترع الذي أوجد الأشياء لا من شيء وأن كل ما سواه مصنوع مربوب حادث وأن الخلق كله فعله والصنع كله صنعه والملك ملكه والأمر أمره لا شريك له في خلقه ولا ند له في ربوبيته وهو على كل شيء قدير</p>
+                    <div class="signature">أبو الطيبات الأثري</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- المسألة 2 -->
+        <div class="issue-card">
+            <div class="card-header" onclick="toggleCard(this.parentElement)">
+                <h2 class="card-title">مسألة المفوض: الإمام عليه السلام هو الرب وهو الخالق الذي لا يوصف</h2>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="answer-body">
+                <div class="answer-inner">
+                    <span class="label-gold"><i class="fas fa-sword"></i> الجواب المفصل</span>
+                    <p>بسم الله الرحمن الرحيم اللهم صل على محمد واله الطيبين الطاهرين.</p>
+                    <p>نقول : الزعم بأن القول في أن الإمام قصد الله عز وجل لا الإمام عليه السلام زعم متهافت. بل هو فهم مهلهل يتصادم مع بقية النصوص. وبيان أول التعارض يتضح من الخبر الذي استقطعنا منه موضع الشاهد وهو قول رسول الله صلى الله عليه وآله. «ثم خلق الملائكة فلما شاهدوا أرواحنا نورا واحدا استعظموا أمرنا فسبحنا لتعلم الملائكة أنا خلق مخلوقون وأنه منزه عن صفاتنا فسبحت الملائكة بتسبيحنا ونزهته عن صفاتنا.» فهذا النص صريح لا يحتمل التلبيس ولا الالتواء. فإن النبي صلى الله عليه وآله يبين بوضوح أن تسبيحهم كان تعليما للملائكة بأنهم خلق مخلوقون وأن الله تعالى منزه عن صفاتهم. فلو سلمنا جدلا بدعواكم أن الرب الذي لا يوصف هو أمير المؤمنين عليه السلام لزم من ذلك لوازم باطلة لا يقول بها عاقل.</p>
+                    <p style="margin-top:20px;">إليكم الرد الثاني ، ان أمير المؤمنين عليه السلام بنفسه يصرح تصريحا لا يقبل التأويل بأنه ليس الرب الخالق الرازق. وإليكم الخبر. «عن عبد الله بن شريك عن أبيه قال. بينا علي عليه السلام عند امرأة له من عنزة وهي أم عمرو إذ أتاه قنبر فقال: إن عشرة نفر بالباب يزعمون أنك ربهم. فقال. أدخلهم. قال: فدخلوا عليه فقال لهم. ما تقولون. فقالوا: إنك ربنا وأنت الذي خلقتنا وأنت الذي رزقتنا. فقال: ويلكم لا تفعلوا إنما أنا مخلوق مثلكم. فأبوا أن يفعلوا فقال لهم. ويلكم ربي وربكم الله ويلكم توبوا وارجعوا. فقالوا. لا نرجع عن مقالتنا أنت ربنا ترزقنا وأنت خلقتنا. فقال: يا قنبر ائتني بالفعلة. فخرج قنبر فأتاه بعشرة رجال مع الزبل والمرور فأمر أن يحفروا لهم في الأرض. فلما حفروا خدا أمر بالحطب والنار فطرح فيه حتى صار نارا تتوقد. قال لهم. توبوا. قالوا. لا نرجع. فقذف علي بعضهم ثم قذف بقيتهم في النار. قال علي عليه السلام: إني إذا أبصرت شيئا منكرا أوقدت ناري ودعوت قنبرا.» فهذا نص قاطع وصريح لا يدع لغال اي شبهة. فإن أمير المؤمنين عليه السلام لم يسكت عن مقالتهم ولم يقرهم عليها ولم يعدل ألفاظهم ولم يحملها على معنى صحيح. بل بادر إلى الإنكار والتشنيع وصرح بقوله إنما أنا مخلوق مثلكم. ثم أكد ذلك بقوله ربي وربكم الله. فهل بعد هذا البيان بيان. وبذلك يثبت المطلوب بلا ريب ولا شبهة وهو أن امير المؤمنين عليا عليه السلام ليس هو الرب الخالق الرازق الذي لا يوصف. وأن من نسب إليه شيئا من ذلك فقد خرج عن حد التوحيد الذي جاء به محمد وآل محمد عليهم السلام.</p>
+                    <span class="ref-tag">#الرب_هو_الخالق_الذي_لا_يوصف</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- المسألة 3 -->
+        <div class="issue-card">
+            <div class="card-header" onclick="toggleCard(this.parentElement)">
+                <h2 class="card-title">مسألة الواسطة: نحن نقول ان آل محمد عليهم السلام هم الواسطة التي خلق الله عز وجل بها كل شيء</h2>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="answer-body">
+                <div class="answer-inner">
+                    <span class="label-gold"><i class="fas fa-link"></i> الجواب</span>
+                    <p>بسم الله الرحمن الرحيم اللهم صل على محمد واله الطيبين الطاهرين.</p>
+                    <p>نقول : ان الامام عليه السلام يقول في خطبة له في التوحيد «فاعل لا بمعنى الحركة والآلات» ويقول ايضا «خلق الخلائق على غير مثال خلا من غيره ، ولم يستعن على خلقها بأحد من خلقه» ويقول ايضا «صانع لا بأحد»</p>
+                    <p>فهذا الكلام يتضمن تنزيها دقيقا لله تعالى ويجمع بين نفي التشبيه وإثبات الفعل والخلق وهو مما جرى عليه المتكلمون. حيث يقول الشيخ المقداد السيوري في اللوامع الالهية ص٣١٨ : «إن قلت : لم لا يجوز أن تكون وسائط بيننا وبين الله تعالى في التأثير؟ فلا يلزم إلهيّتها. قلت : الواسطة منفية بالإجماع وبتواتر النقل.»</p>
+                    <p>ويقول العلامة الحلي في انوار الملكوت في شرح الياقوت ج١ ص٦٢ : «فان قيل : لم لا يكون المؤثر مختارا ممكنا وعلته واجبة موجبة له فلا يلزم ما ذكرتم من المحاذير سلمنا لكن بقاء القادرية الازلية بعد وجود المقدور محال لاستحالة ايجاد الموجود وان عدمت لزم جواز عدم القديم سلمنا لكن لم لا يكون المؤثر موجبا قوله يلزم القدم قلنا القدم ان كان ممكنا التزمنا وان كان مستحيلا لم يلزم قدمه لقدم المؤثر لان الاثر يتبر فيه القابل سلمنا لكن الممكنة من الطريقين يستحيل حصولها حال حصول احدهما لوجوبه وامتناع الآخر وقيله لان الحصول في الاستقبال مشروط بالاستقبال الممتنع في الحال فلا يكون مقدورا سلمنا لكن الترك غير مقدور لكونه نفيا صرفا فلا يصح نفيه عن القادر بانه الذي يمكنه الفعل والترك والجواب عن الاول ان نفى الواسطة معلوم بالاجماع ومثل هذه يمكن الاستدلال فيها بالسمع فلا يكون دورا وهذا كاف فى نفى الواسطة او نقول الواسطة ممكنة لاستحالة تعدد الواجب لذاته فهى من جملة ما سوى الله وثبوت واسطة بين وجود الله تعالى ووجود ما سواه غير معقول»</p>
+                    <p><b>الان نأتي لشرح الجمل في خطبة الامام عليه السلام :</b></p>
+                    <p>قوله عليه السلام : «الله عزّ وجل فاعل» إثبات لكونه سبحانه مؤثّرًا موجدًا للأشياء بعد أن لم تكن . غير أن هذا الفعل ليس كفعل المخلوقين إذ أفعالهم لا تحقق إلا بالحركة والانتقال وتغيّر الحال وكل ذلك من لوازم الجسم والحدوث وهي منفية عنه تعالى. وقبوله عليه السلام: «لا بمعنى الحركة والآلات» نفي لما يتوهّمه أهل التشبيه فإن الحركة دليل الحاجة والآلة واسطة العاجز إلى الفعل ومن احتاج فقد افتقر ومن افتقر لم يكن إلهًا. ففعله سبحانه ليس ناشئًا عن تحريك جارحة ولا عن استعمال أداة، ﴿إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَنْ يَقُولَ لَهُ كُنْ فَيَكُونُ﴾.</p>
+                    <p>«عن صفوان بن يحيى، قال: قلت لأبى الحسن عليه السلام أخبرني عن الإرادة من اللّه ومن الخلق؟ قال: فقال: الإرادة من الخلق الضمير وما يبدو لهم بعد ذلك من الفعل وأما من اللّه تعالى فإرادته إحداثه لا غير ذلك، لأنّه لا يروّى ولا يهمّ ولا يتفكّر، وهذه الصفات منفيّة عنه و هي صفات الخلق، فإرادة اللّه الفعل لا غير ذلك ؛ يقول له: كن فيكون، بلا لفظ ولا نطق بلسان ولا همّة ولا يتفكّر ولا كيف لذلك، كما أنّه لا كيف له.»</p>
+                    <p>وقوله عليه السلام «وصانع لا بأحد» معناه فكل صانع من الخلق إنما يصنع بمعين أو مادة أو سبب سابق أما الله تعالى فهو علة العلل وسبب الأسباب بل خالق السبب والمسبب جميعًا.</p>
+                    <p>وقوله عليه السلام «ولم يستعن على خلقها بأحد من خلقه» تأكيد لنفي الشريك والمظاهر والمعين. فالاستعانة إنما تكون من ضعف أو جهل أو عجز عن الإحاطة بالفعل وكل ذلك محال في حقه سبحانه. وقد نطقت الأخبار بذلك صراحة، كما في قولهم عليهم السلام: (والله الخالق اللطيف الجليل خلق وصنع لا من شيء) وبنقل آخر: (والله لا من شيء صنع ما خلق).</p>
+                    <span class="ref-tag">#الواسطة_في_الخلق</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- المسألة 4 -->
+        <div class="issue-card">
+            <div class="card-header" onclick="toggleCard(this.parentElement)">
+                <h2 class="card-title">كيف تصفون الله تعالى والامام عليه السلام يقول وكمال الاخلاص له نفي الصفات عنه</h2>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="answer-body">
+                <div class="answer-inner">
+                    <span class="label-gold"><i class="fas fa-balance-scale"></i> الجواب</span>
+                    <p>بسم الله الرحمن الرحيم اللهم صل على محمد واله الطيبين الطاهرين.</p>
+                    <p>نقول : بسبب جهلكم في حديث الإمام عليه السلام تظنون أن كل الصفات تُنفي عن الله تعالى! الإمام يقول صريحًا: <span class="highlight">«فمن وصف الله سبحانه فقد قرنه، ومن قرنه فقد ثناه، ومن ثناه فقد جزأه»</span>.</p>
+                    <p>فليعلم الجاهل أن النفي هنا ليس مطلقًا بل هو نفي الصفات التي تقتضي التجزئة كأن تقول لله أعضاء ، فهذا باطل ومردود. والإمام عليه السلام في مواضع أخرى يصرح: <b>«أنت خالقنا وخالق آبائنا الأولين وآبائنا الآخرين»</b>، ويقول أيضًا: <b>«يا أرحم الراحمين»</b>، وهذه الصفات فعلية محدثة.</p>
+                    <p style="margin-top: 15px; color: var(--gold-bright); font-weight: bold;">فالسؤال لكم : حسب منطقكم كيف يصف الإمام عليه السلام الله عز وجل بهذه الصفات ويقول وكمال الإخلاص له نفي الصفات عنه؟ فكروا قبل أن تتكلموا.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- المسألة 5 -->
+        <div class="issue-card">
+            <div class="card-header" onclick="toggleCard(this.parentElement)">
+                <h2 class="card-title">كيف الإمام عليه السلام غير الحصى الى جواهر وهذا الأمر من مختصات الله؟</h2>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="answer-body">
+                <div class="answer-inner">
+                    <span class="label-gold"><i class="fas fa-gem"></i> الجواب</span>
+                    <div class="narration-box">
+                        عن أمير المؤمنين انه كان مع أصحابه في مسجد الكوفة فقال له رجل بابي وأمي انى لا تعجب من هذه الدنيا التي في أيدي هؤلاء القوم وليست عندكم فقال يا فلان أترى انا نريد الدنيا فلا نعطاها ثم قبض قبضة من الحصى فإذا هي جواهر فقال ما هذا فقلت هذا من أجود الجواهر فقال لو أردناه لكان ولكن لا نريده ثم رمى بالحصى فعادت كما كانت.<br><br>
+                        عن أبي عبد الله عليه السلام، قال: قال في الربوبية العظمى والإلهية الكبرى: لا يكون الشئ لا من شيء إلا الله، ولا ينقل الشئ من جوهريته إلى جوهر آخر إلا الله، ولا ينقل الشئ من الوجود إلى العدم إلا الله.
+                    </div>
+                    <p>بسم الله الرحمن الرحيم اللهم صل على محمد واله الطيبين الطاهرين.</p>
+                    <p>نقول : إن الإمام عليه السلام بيّن بوضوح أنّه لا ينقل الشيء من جوهريته إلى جوهر آخر إلا الله سبحانه وتعالى، وهذا نص محكم لا يحتمل التأويل. فمن هذا المنطلق ما يُروى عن تحويل الحصى إلى جواهر لا يعني أنّ الإمام نفسه يصنع ذلك بل هو عمل الله تعالى الذي يجري هذه المعجزة على يده. فلا نعتمد على نص واحد ونهمل النصوص الأخرى بل يجب أن تُفهم الأحاديث بشكل صحيح وإلا وقعنا في الالتباس والتفسير الخاطئ.</p>
+                    <p style="margin-top: 20px; border-top: 1px dashed rgba(212, 175, 55, 0.3); padding-top: 20px;">فقلت : يابن رسول الله إنهم يزعمون أن عليا لما أظهر من نفسه المعجزات التي لا يقدر عليها غير اللّه دلّ على أنه اللّه، و لما ظهر لهم بصفة المحدثين العاجزين لبّس ذلك عليهم و امتحنهم ليعرفوه و ليكون إيمانهم اختيارا من أنفسهم، فقال الرضا :أول ما هاهنا أنهم لا ينفصلون ممن قلب هذا عليهم، فقال: لما ظهر منه الفقر و الفاقة دلّ على أن من هذه صفته و شاركه فيها الضعفاء المحتاجون <span class="highlight">👈 لا تكون المعجزات فعله، فعلم بهذا أن الذي أظهر المعجزات إنما كانت من فعل القادر الذي لا يشبه المخلوقين لا فعل المحتاج المشارك للضعفاء في صفات الضعف. 👉</span></p>
+                    <span class="ref-tag">📕 الاحتجاج ج 2/ 234</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- المسألة 6 -->
+        <div class="issue-card">
+            <div class="card-header" onclick="toggleCard(this.parentElement)">
+                <h2 class="card-title">ان خلق السماء والارض هو خلق تقدير وليس خلق اختراع لان الله خلق السماوات والارض من الدخان والرماد</h2>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="answer-body">
+                <div class="answer-inner">
+                    <span class="label-gold"><i class="fas fa-globe"></i> الجواب</span>
+                    <div class="narration-box">
+                        عن محمد بن مسلم قال: قال لي أبو جعفر (عليه السلام):كان كل شئ ماءا وكان عرشه على الماء فأمر الله عز ذكره الماء فاضطرم نارا ثم أمر النار فخمدت فارتفع من خمودها دخان فخلق الله عز وجل السماوات من ذلك الدخان وخلق الله عز وجل الأرض من الرماد.
+                    </div>
+                    <p>بسم الله الرحمن الرحيم اللهم صل على محمد واله الطيبين الطاهرين.</p>
+                    <p>نقول : يذهب هؤلاء لقصور نظرِهم إلى أن كل ما خُلِقَ من شيء فهو عندهم تقدير لا غير ويحسبون أن هذا لازم لا انفكاكَ عنه وهو باطل من أصلِ. فإنّ خلق التقدير كما دلّت عليه الأخبار إنما هو خلق الهيئة والصورة كما في خلقِ النبي عيسى عليه السلام . حيث كان الخلق واقعًا على تقدير وصياغة مخصوصة. وليس من لوازم هذا النحو من الخلق أن يكون الشيء مخلوقًا على مثال سابق له في الوجود.</p>
+                    <p>بل إن خلق الشيء من شيء لا يستلزم نفي الاختراع ولا يخرجه عن حدّه لأنّ مناطَ الاختراع ليس مجرّد المادة وإنما هو عدم السبق والمثال. وقد بيّن الإمام الباقر عليه السّلام ذلك بيانا لا لبسَ فيه إذ قال: <span class="highlight">«إنّ الله عزّ وجلّ ابتدع الأشياء كلّها بعلمه على غير مثالٍ كان قبله، فابتدع السماوات والأرضين، ولم يكن قبلهنّ سماواتٌ ولا أرضون»</span>.</p>
+                    <p>فهنا علّة التسمية بخلق الاختراع ظاهرة من نفس اللّفظ والمعنى إذ هو خلقُ شيء لا سابق له ولا مثيل وإن كان مخلوقًا من شيء لأن شرط الاختراع قد تحقق وهو ما نصّ عليه الإمام بقوله: «ولم يكن قبلهن سماوات ولا أرضون».</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- المسألة 7 -->
+        <div class="issue-card">
+            <div class="card-header" onclick="toggleCard(this.parentElement)">
+                <h2 class="card-title">الله عز وجل فوض الى الائمة عليهم السلام في كل شيء حتى أمر الخلق والرزق فلماذا تنكرون هذه المقامات ؟</h2>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="answer-body">
+                <div class="answer-inner">
+                    <span class="label-gold"><i class="fas fa-hand"></i> الجواب</span>
+                    <div class="narration-box">
+                        عن إسماعيل بن عبد العزيز قال قال لي جعفر بن محمد ان رسول الله صلى الله عليه وآله كان يفوض إليه ان الله تبارك وتعالى فوض إلى سليمان ملكه فقال هذا عطاؤنا فامنن أو أمسك بغير حساب وان الله فوض إلى محمد نبيه فقال ما اتيكم الرسول فخذوه وما نهيكم عنه فانتهوا . فقال رجل إنما كان رسول الله صلى الله عليه وآله مفوضا إليه في الزرع والضرع ، فلوى جعفر عليه السلام عنه عنقه مغضبا فقال في كل شئ والله في كل شئ.
+                    </div>
+                    <p>بسم الله الرحمن الرحيم اللهم صل على محمد واله الطيبين الطاهرين.</p>
+                    <p>نقول : إن لفظة كل شيء الواردة في كلام الإمام عليه السلام لا تُفهم مبتورة عن موردها وسياقها لأن التفويض الذي تكلم عنه الإمام إنما هو تفويض أمور الدين لا غير وهذا ظاهر لمن له أدنى إنصاف إذ الكلام صدر في مقام الطاعة والاتباع لا في مقام الخلق والرزق ودلالته واضحة بضمّها إلى قوله تعالى ﴿ما آتاكم الرسول فخذوه وما نهاكم عنه فانتهوا﴾ فالمقام مقام تشريع.</p>
+                    <p>ولو تنزّلنا معكم جدلا وقلنا إن المراد من كل شيء هو الإطلاق بلا قيد ولا تخصيص فنقول لكم هل تدل هذه اللفظة عندكم على تفويض الخلق والرزق أم لا فإن قلتم نعم وهو لازم مذهبكم قلنا لكم خذوا هذه الحجة القاطعة التي تهدم أصل دعواكم من أساسها. « عن أبي بصير عن أبي عبد الله عليه السلام قال إن الله تبارك وتعالى فوض إلى المؤمن كل شيء إلا إذلال نفسه». فعلى هذا الفهم الفاسد يلزم أن يكون كل المؤمنين خالقين رازقين وهذا عين الشرك.</p>
+                    <p>وعلى فرض التسليم بأن اللفظ يدل على كل شيء بالمطلق فإن النص لا يُؤخذ على إطلاقه هكذا بلا جمع ولا رد إلى سائر الأخبار بل هو مقيّد بنصوص أُخر صريحة في النفي كقول الإمام عليه السلام «وأما الخلق والرزق فلا» أو قوله عليه السلام «وحجب عنه حرفا واحدا». فیتعين أن يكون المعنى في كل شيء إلا ما أخرجه الإمام بنفسه ونفاه بلسانه ولا يجوز بعد هذا البيان حمل الكلام على ما يخالف تصريح الائمة عليهم السلام فإن ذلك ليس فهما للنص بل تحريفا لمعناه وردّا لحديثهم بعضه على بعض.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- المسألة 8 -->
+        <div class="issue-card">
+            <div class="card-header" onclick="toggleCard(this.parentElement)">
+                <h2 class="card-title">في زيارة الامام عليه السلام نقرأ « السلام على شجرة التقوى وسامع السر والنجوى ومنزل المن والسلوى». فالإمام عليه السلام هو منزل المن والسلوى وهما من الرزق فلماذا تنكرون ان الامام عليه السلام رازق ؟</h2>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="answer-body">
+                <div class="answer-inner">
+                    <span class="label-gold"><i class="fas fa-cloud"></i> الجواب</span>
+                    <p>بسم الله الرحمن الرحيم اللهم صل على محمد واله الطيبين الطاهرين.</p>
+                    <p>نقول : الأصل هو ان الله عز وجل هو الذي قسم الأرزاق لأنه ليس بجسم ولا حال في جسم ليس كمثله شيء وهو السميع العليم والدليل هو توقيع الحجة عجل الله فرجه الشريف « فخرج إليهم من جهته توقيع نسخته: " إن الله تعالى هو الذي خلق الأجسام وقسم الأرزاق، لأنه ليس بجسم ولا حال في جسم، ليس كمثله شئ وهو السميع العليم، وأما الأئمة عليهم السلام فإنهم يسألون الله تعالى فيخلق ويسألونه فيرزق، إيجابا لمسألتهم وإعظاما لحقهم ».</p>
+                    <p><b>الان نأتي الى تفسير هذه الآية الكريمة :</b></p>
+                    <p>فقد روى عن الصادق صلوات الله عليه انه قال : <span class="highlight">«نومة الغداء مشؤومة تطرد الرزق، وتصفر اللون، وتقبحه وتغيره، وهو نوم كل مشؤوم، إن الله تعالى قسم الأرزاق ما بين طلوع الفجر إلى طلوع الشمس، وإياكم وتلك النومة، وكان المن والسلوى ينزل على بني إسرائيل ما بين طلوع الفجر إلى طلوع الشمس، فمن نام تلك الساعة لم ينزل نصيبه، وكان إذا انتبه فلا يرى نصيبه احتاج إلى السؤال والطلب.»</span></p>
+                    <p>«عن أبي المهبان البكري قال : سمعت على بن أبي طالب و دعا رأس الجالوت واسقف النصارى فقال : أنى سائلكما عن أمر وانا أعلم به منكم اذ لا تكتماني يا رأس الجالوت بالذي انزل التورية على موسى والطعمكم المن والسلوى ، و ضرب لكم في البحر طريقاً يبسا و فجر لكم من الحجر الطوري اثنتا عشرة عيناً لكل سبط من بنى اسرائيل عيناً».</p>
+                    <p><b>الخلاصة:</b> فقول الزيارة (ومنزل المن والسلوى) يُفهم في ضوء هذه الأحاديث؛ فالإمام يخبر عما جرى بقدرة الله وتوقيته، أو أن نزوله كان ببركتهم ودعائهم كما صرح التوقيع الشريف، وليس استقلالاً في الرزق.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- المسألة 9 -->
+        <div class="issue-card">
+            <div class="card-header" onclick="toggleCard(this.parentElement)">
+                <h2 class="card-title">الامام عليه السلام يقول «إنا صنائع ربنا والخلق بعد صنائعنا». فهذا يعني ان اهل البيت عليهم السلام خلقهم الله وهم خلقوا باقي الخلق فلماذا تنكرون هذا المقام ؟</h2>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="answer-body">
+                <div class="answer-inner">
+                    <span class="label-gold"><i class="fas fa-seedling"></i> الجواب</span>
+                    <p>بسم الله الرحمن الرحيم اللهم صل على محمد واله الطيبين الطاهرين.</p>
+                    <p>نقول : المقصود بقولهم عليهم السلام: «فإنّا صنائعُ ربِّنا» أنّ الله تعالى هو الذي تولّى شأنهم فاختصّهم بالاصطفاء والاختيار وربّاهم بعنايته فنعمتهم خالصة من الله وحده لا يدّعيها أحد ولا يشاركهم فيها أحد. ثم قالوا: «والناسُ بعدُ صنائعُنا»، أي أن الخلق إنما نالوا الهداية والرشاد وخرجوا من ظلمات الجهل والضلال ببركة تعليمهم وولايتهم وعلى أيديهم جرى فيض الهداية الإلهية.</p>
+                    <p>ذكر العلامة المجلسي في بيان هذه العبارة أن قوله عليه السلام (فَإِنَّا صَنَائِعُ رَبِّنَا) قال: (هذا كلام مشتمل على أسرار عجيبة من غرائب شأنهم التي تعجز عنها العقول ولنتكلم على ما يمكننا إظهاره والخوض فيه فنقول: صنيعة الملك من يصطنعه ويرفع قدره ومنه قوله تعالى: (وَاصْطَنَعْتُكَ لِنَفْسِي)، أي اخترتك وأخذتك صنيعتي لتنصرف عن إرادتي ومحبتي فالمعنى أنه ليس لأحد من البشر علينا نعمة بل الله تعالى أنعم علينا فليس بيننا وبينه واسطة، والناس بأسرهم صنائعنا فنحن الوسائط بينهم وبين الله سبحانه.)</p>
+                    <p>فالمراد بالصنيعة في هذا المقام ليس الخلق ولا الإيجاد من العدم فإنّ ذلك مختصّ بالله تعالى وحده بل المراد بها الاختصاص والعناية والاصطفاء. ولو فُرض جدلًا أن الصنيعة تُحمل على معنى الخلق للزم من ذلك لوازم باطلة لا يقول بها عاقل ؛ إذ إنّ أمير المؤمنين عليه السلام قد خاطب معاوية بمثل هذا الكلام كما ورد في نهج البلاغة: «نحن صنائعُ ربّنا، والخلقُ بعدُ صنائعُ لنا». فهل يُعقل أن يكون مراده عليه السلام أنّه خلق معاوية؟!</p>
+                    <p>وقد ورد خبر عن النبي صلى الله عليه واله وسلم قوله: «فنحن صنائع ربنا والخلق من بعد صنائع لنا اي مصنوعين لأجلنا.» فصرح الخبر بان الخلق انما صنعوا لاجلهم وبسببهم. وهذا المعنى هو بعينه ما ورد عن الامام الباقر عليه السلام في قوله: «نحن سبب خلق الخلق». فدل مجموع الكلام على انهم العلة الغائية في الخلق. لا انهم خالقون على الحقيقة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== قسم الباحث أبو الطيبات 2 (الرد على أمير القريشي) ========== -->
+<section id="abotalbat2" class="section-view">
+    <div class="back-button" onclick="showPortal()">
+        <i class="fas fa-arrow-right"></i> العودة إلى البوابة
+    </div>
+    <h2 class="section-title">الرد على أمير القريشي</h2>
+    <h3 style="text-align: center; color: var(--gold-rich); margin-bottom: 40px; font-family: 'Amiri';">في مسألة التفويض الإستقلالي المذموم</h3>
+
+    <!-- البطاقة 1: المقدمة -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">المقدمة</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>الحمد لله مسيد السادات ورافع السماوات وداحي الأرض ومبارك السنوات ودافع النقم والمخرج في البليات. خالق الخلق وارزق الرزق والمحيي والميت وهو العزيز الحكيم.</p>
+                <p>وما الأئمة وعلى أخيه المرتضى وخير من وطى الحصى الذي يملأ الأرض كلها قسطاً وعدلاً كما ملئت ظلماً وجوراً وعلى ابنته الصديقة الكبرى فاطمة بنت محمد الراضية المرضية والنفس الزكية الطاهرة المباركة الحوراء الإنسية وعلى ابنهم أبي محمد السبط الأكبر والشامخ الأغر صاحب السمو والوصية المسموع المظلوم ورشاد أهل العلوم ومعز المؤمنين وبوار الكافرين وعلى أخيه أبي عبد الله الحسين عليه السلام الشهيد المظلوم والناصر المنصور وسلم تسليماً كثيراً بعدد النفوس والأنفاس والدور والأحوال والنجوم والكواكب والمراكب وارزقنا شفاعتهم وطاعتهم ولا تحرمنا من النظر لوجهك الكريم وارزقنا نصر القائم على كل زنيم برحمتك يا أرحم الراحمين.</p>
+                <div class="signature">✿  متامه  ✿</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 2: أما بعد -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">أما بعد</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>فإن هذه الرسالة هي نقض على ما جاء به امير القريشي في مسألة التفويض حيث قال في مقاطعه في قناته على منصة اليوتيوب (إن الروايات التي جاءت في بطلان التفويض ونفي التفويض عن الأئمة عليهم السلام هي تقصد التفويض الإستقلالي أي أن الله فوض لأهل البيت أمر كل شيء وتركهم وأصبح مستقل عنهم وهم مستقلون عنه فهم عندما يقومون بفعل معين فإن هذا الفعل ليس بإذن الله وأمره!). ويعبر عنه امير القريشي بالتفويض المذموم!، عجبًا لقوم يصدقون هذا الكلام الباطل والذي لم يرد في روايات اهل البيت عليهم السلام ولا في معاجم اللغة العربية!، والصيبة الأكبر ان هذا الرجل يقول دعكم من اللغة العربية ولا يقبل معاني الكلمات من معاجم اللغة العربية!</p>
+                <p>أقول: لا نعلم لماذا يقول هذا الكلام وعلى أي شيء استند حتى يسقط اللغة العربية ولا يقبل الاحتجاج بها! كلنا نعلم ان أهل البيت (عليهم السلام) قوم فصحاء فعندما يتحدثون بكلمة عربية فصيحة يجب علينا ان نعلم ما معنى هذه الكلمة وإلا لا يمكننا فهم أحاديثهم صلوات الله عليهم .</p>
+                <p>وهو اذا لا يقبل استعمال معاجم اللغة التي تبين معاني الكلمات كيف يعرف معاني الكلمات ؟ هل الإمام عليه السلام بين معاني جميع الكلمات التي في اللغة العربية حتى يستغني عن المعاجم ام ماذا؟</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 3: في الحث على تعلم العربية -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">فصل: في الحث على تعلم العربية</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <strong>حدثنا أبي رضي الله عنه قال:</strong> حدثنا سعد بن عبد الله قال: حدثنا أحمد ابن محمد بن عيسى، عن أحمد بن محمد بن أبي نصر البزنطي، عن رجل من خزاعة، عن أسلمي، عن أبيه، عن أبي عبد الله عليه السلام قال: <strong>«تعلموا العربية فإنها كلام الله الذي تكلم به خلقه، ونظفوا الماضغين، وبلغوا بالخواتيم»</strong><span class="ref-tag">(1)</span>
+                </div>
+                <div class="narration-box">
+                    <strong>محمد بن يحيى، عن أحمد بن محمد بن عيسى، عن أحمد بن محمد بن أبي نصر، عن جميل بن دراج، قال:</strong> قال أبو عبد الله (عليه السلام): <strong>«أعربوا حديثنا فإنا قوم فصحاء»</strong><span class="ref-tag">(2)</span>
+                </div>
+                <div style="background: rgba(212,175,55,0.1); padding:15px; border-radius:15px; margin-top:20px;">
+                    <strong>بيان:</strong> أي أظهروه، وبينوه، أو لا تتركوا فيه قوانين الإعراب، أو أعربوا لفظه عند الكتابة<span class="ref-tag">(3)</span>
+                </div>
+                <div style="background: rgba(212,175,55,0.1); padding:15px; border-radius:15px; margin-top:20px;">
+                    <strong>بيان:</strong> الإعراب الإبانة والإيضاح، يقال: أعرب كلامه إذا لم يلحن في الحروف والإعراب، وسميت الإعراب إعراباً لأنها تبين المعاني المختلفة الواردة على سبيل التبادل وتوضحها وتميزها بحيث لا يشتبه بعضها ببعض<span class="ref-tag">(2)</span>، والفصاحة الخلوص والجودة في اللسان وطلاقته، يقال: فصح الرجل بالضم فصاحة، وهو فصيح إذا خلصت عبارته عن الرداءة وجادت لغته وطلق لسانه، وهم (عليهم السلام) أفصح الفصحاء لأنهم أوتوا الكلمات العجيبة الجامعة والعبارات الأنيقة الرائقة الخالية عن النقص واللحن وعن كل ما يوجب غبار الطبع السليم ونفار العقل المستقيم وكراهة السمع.
+                </div>
+                <p>والمعنى: إذا حدثتم بأحاديثنا فأعربوا حروفها وكلماتها وأظهروا إعرابها وحركاتها كما ينبغي ولا تلحنوا في شيء منها لئلا يشتبه بعضها ببعض «فإنا قوم فصحاء» لا نتكلم إلا بكلام فصيح ليس فيه نقص ولحن في الحروف والحركات فإن لحنتم في أحاديثنا وأفسدتم حروفها وكلماتها وحركاتها اختلت فصاحتها وذلك مع كونه موجبا للاشتباه وفوات المقصود نقص علينا وعليكم<span class="ref-tag">(4)</span>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 4: روايات في التفويض -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">روايات في التفويض</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <strong>حدثنا محمد بن خالد الطيالسي عن سيف بن عميره عن أبي بكر الحضرمي عن رفيد مولى ابن هبيرة قال:</strong> أبو عبد الله عليه السلام <strong>«إذا رأيت القائم أعطى رجال مائة ألف وأعطى آخر درهما فلا يكبر في صدرك، وفي رواية أخرى: فلا يكبر ذلك في صدرك فان الأمر مفوض إليه»</strong><span class="ref-tag">(1)</span>
+                </div>
+                <p>في هذه الرواية ان الله تبارك وتعالى فوض تقسيم الأموال إلى الإمام الحجة (عجل الله تعالى فرجه الشريف) فعلى حسب فهمكم للتفويض فان الإمام لا يحتاج إلى ربه وأصبح مستقلاً والعياذ بالله من هذا القول الباطل الناشئ من أخطاء المجتهدين في فهم أحاديثهم صلوات الله عليهم.</p>
+                <div class="narration-box">
+                    <strong>حدثنا محمد بن علي ماجيلويه (ره) قال: حدثنا علي بن إبراهيم بن هاشم عن أبيه عن ياسر الخادم قال:</strong> قلت للرضا عليه السلام ما تقول في التفويض؟ فقال: <strong>«إن الله تبارك وتعالى فوض إلى نبيه (ص) أمر دينه فقال: (ما آتاكم الرسول فخذوه وما نهاكم عنه فانتهوا) فأما الخلق والرزق فلا. ثم قال عليه السلام: إن الله عز وجل يقول: (الله خالق كل شيء) وهو يقول: (الله الذي خلقكم ثم رزقكم ثم يميتكم ثم يحييكم قل هل من شركائكم يفعل من ذلكم من شيء) سبحانه وتعالى عما يشركون»</strong><span class="ref-tag">(2)</span>
+                </div>
+                <p>هل التفويض الإلهي الثابت للنبي في أمر الدين استقلالي؟ طبعاً لا. فلماذا ادعيتم أن التفويض الآخر في الخلق والرزق المنفي على معنى الاستقلال؟ أنتم بهذا قولكم جعلتم من الرسول (صلى الله عليه وآله) مجتهداً ومصدر تشريع ليس بجانب الله والعياذ بالله من هذا القول الباطل.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 5: الروايات النافية للتفويض في الخلق والرزق -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">الروايات النافية للتفويض في الخلق والرزق</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>الآن ننتقل للروايات التي نفت تفويض أمر الخلق والرزق عن الأئمة عليهم السلام وكما بينا سابقاً معنى التفويض في معاجم اللغة العربية ليس كما يقول امير القريشي والغلاة والمفوضة لعنهم الله لا من بعيد ولا من قريب! .</p>
+                <div class="narration-box">
+                    <strong>وروي عن زرارة أنه قال، قلت للصادق - عليه السلام -:</strong> (ان رجلاً من ولد عبد الله بن سبأ يقول بالتفويض). قال - عليه السلام -: (وما التفويض)؟ قلت: يقول: إن الله عز وجل خلق محمداً صلى الله عليه وآله وسلم وعلياً - عليه السلام - ثم فوض الأمر إليهما، فخلقا، ورزقا، وأحييا، وأماتا. <strong>فقال: «كذب عدو الله، إذا رجعت إليه فاقرأ عليه الآية التي في سورة الرعد ﴿أم جعلوا لله شركاء خلقوا كخلقه فتشابه الخلق عليهم قل الله خالق كل شيء وهو الواحد القهار﴾ فانصرفت إلى الرجل فأخبرته بما قال الصادق - عليه السلام - فكأنما ألقمته حجراً، أو قال: فكأنما خرِس»</strong><span class="ref-tag">(1)</span>
+                </div>
+                <p>الكثير من الغلاة والمفوضة لعنهم الله يقولون ان في الرواية عبد الله بن سبأ وهو يقول ان الإمام (عليه السلام) هو الله يخلق ويرزق بدون أمر واذن من الله لأنه هو الله وهذا باطل بل نحن نقول ان الإمام يخلق ويرزق باذن الله.</p>
+                <p>أقول : الرواية لم تقل عبد الله بن سبأ بل قالت رجل من ولد عبد الله بن سبأ يعني ابن سبأ جده وهذا الرجل لا يقول ان الإمام هو الله بل يقول بالتفويض والتفويض كما قال زرارة ان الرجل يقول ان الله خلق محمد وعليا وفوض اليهما الأمر فخلقا ورزقا وأحييا وأماتا اي ان الله جعلهما يخلقان ويرزقان ويميتان ويحييان وليسوا هم مستقلين عن الله بل هذا الأمر من الله والإمام ( عليه السلام) نفى هذا التفويض وقال كذب عدو الله فالمفوضة لعنهم الله من الكذابين بلسان الإمام(عليه السلام).</p>
+                <p>ثم ان الإمام (عليه السلام) ذكر آية مباركة للرد على المفوضة لعنهم الله تقول (أم جعلوا لله شركاء خلقوا كخلقه فتشابه الخلق عليهم قل الله خالق كل شيء وهو الواحد القهار). فإذا تقول ان الإمام (عليه السلام) يخلق كخلق الله فقد جعلته شريكاً مع الله وهنا نفينا خلق الشيء لا من شيء عن الإمام ( عليه السلام) لأن خلق الله سبحانه وتعالى هو خلق الشيء لا من شيء وهذه روايات تعضد قولي:</p>
+                <div class="narration-box">
+                    <strong>أي رحمه الله، قال: حدثنا أحمد بن إدريس، عن محمد بن أحمد، عن سهل ابن زياد، عن أحمد بن بشر عن محمد بن جمهور العمي، عن محمد بن الفضيل بن يسار، عن عبد الله بن سنان، عن أبي عبد الله عليه السلام، قال:</strong> قال في الربوبية العظمى والإلهية الكبرى: <strong>«لا يكون الشيء لا من شيء إلا الله، ولا ينقل الشيء من جوهريته إلى جوهر آخر إلا الله، ولا ينقل الشيء من الوجود إلى العدم إلا الله»</strong><span class="ref-tag">(1)</span>
+                </div>
+                <div class="narration-box">
+                    <strong>أمير المؤمنين (عليه السلام):</strong> إنما قال لما شاء: كن فكان، ابتدع ما خلق بلا مثال سبق ولا تعب ولا نصب وكل صانع شيء فمن شيء صنع والله لا من شيء صنع ما خلق وكل عالم فمن بعد جهل تعلم والله لم يجهل ولم يتعلم أحاط بالأشياء علماً قبل كونها<span class="ref-tag">(2)</span>
+                </div>
+                <div class="narration-box">
+                    <strong>حدثنا تميم بن عبد الله بن القرشي رضي الله عنه قال: حدثنا أبي عن أحمد بن علي الأنصاري عن بريد بن معاوية الشامي قال:</strong> دخلت على علي بن موسى الرضا بمرور فقلت له: يا بن رسول الله روي لنا عن الصادق جعفر بن محمد عليهما السلام قال: إنه لا جبر ولا تفويض بل أمر بين أمرين فما معناه؟ قال: <strong>«من زعم أن الله يفعل أفعالنا ثم يعذبنا عليها فقد قال بالجبر، ومن زعم أن الله عز وجل فوض أمر الخلق والرزق إلى حججه عليهم السلام فقد قال بالتفويض، والقائل بالجبر كافر والقائل بالتفويض مشرك»</strong><span class="ref-tag">(1)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 6: الخلاصة -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">الخلاصة</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>إلى هنا اكتفي بهذه الروايات الشريفة التي تنفي التفويض عن اهل البيت (عليهم السلام) وكل من يقرأ هذا الملف ولم يتب عن هذه العقيدة الشركية النجسة فعليه لعنة الله ولعنة اللاعنين.</p>
+                <div style="text-align: left; font-size:1.4rem; margin-top:40px;">خادمكم ابو الطيبات الأثري</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== قسم الباحث أبو الطيبات 3 (يد الله بين التنزيه والتفويض) ========== -->
+<section id="abotalbat3" class="section-view">
+    <div class="back-button" onclick="showPortal()">
+        <i class="fas fa-arrow-right"></i> العودة إلى البوابة
+    </div>
+    <h2 class="section-title">يد الله بين التنزيه والتفويض</h2>
+    <h3 style="text-align: center; color: var(--gold-rich); margin-bottom: 40px; font-family: 'Amiri';">نصوص في معنى «يد الله» وبيان بطلان التفويض والغلو</h3>
+    <div style="text-align: center; margin-bottom: 30px;">
+        <span style="background: rgba(212,175,55,0.2); padding: 10px 25px; border-radius: 50px; color: var(--gold-primary);">
+            ✍️ أبو الطيبات الأثري • نقد عن المشيج حسني الطفيل
+        </span>
+    </div>
+
+    <!-- البطاقة 1: صفحة 1 - معنى اليد في اللغة والروايات -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 1 - معنى اليد في اللغة والروايات</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>ورد في بعض الأخبار الواردة عنهم صلوات الله عليهم بأنهم يد الله، فما معنى ذلك؟ وهل يدل على أنهم قد فوضوا بأفعال الله تعالى كما يقول المفوضة لعنهم الله؟</p>
+                <p>لفظة يد تعتبر من المتشابهات لأنها تحتمل معان عدة، منها اليد الجارحة، ومنها القدرة، ومنها الرعاية، ومنها النعمة، ومنها التوفيق والتسديد، ومنها العطاء، ومنها الملكية وغير ذلك، لذلك لما نجد هذه اللفظة في مورد ما فيجب أن لا نترسع في فهم معناها من دون البحث في قرائن الكلام أو الرجوع إلى أهل البيت في ذلك.</p>
+                <div class="narration-box">
+                    <p>فمثلاً عن جابر، عن أبي جعفر (عليه السلام) قال: قال رسول الله (صلى الله عليه وآله): «من أراد أن يكون أغنى الناس فليكن بما في يد الله أوثق منه بما في يد غيره» (1) واليد هنا تعني الملكية. وعن السكوني، عن أبي عبد الله عليه السلام قال: قال أمير المؤمنين عليه السلام: «يد الله فوق رأس الحاكم ترفرف بالرحمة فإذا حاف وكله الله إلى نفسه» (2). واليد هنا تعني التسديد.</p>
+                </div>
+                <span class="ref-tag">(1) (2) مصادر الحديث</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 2: صفحة 2 - الروايات في أنهم يد الله -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 2 - الروايات في أنهم يد الله</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>وفي رسالة الحقوق قال الإمام السجاد عليه السلام: «وأما حق الشريك، فإن غاب كفيته، وإن حضر رعيته، ولا تحكم دون حكمه، ولا تعمل برأيك دون مناظرته، تحفظ عليه ماله، ولا تخونه فيما عز أو هان من أمره، فإن يد الله عز وجل على الشريكين ما لم يتخاونا، ولا قوة إلا بالله» (١). واليد هنا تعني الرعاية.</p>
+                </div>
+                <div class="narration-box">
+                    <p>حدثنا أحمد بن الحسين قال أخبرنا أحمد بن بشر قال حدثنا حسان الجمال قال حدثنا هاشم بن أبي عمار قال سمعت أمير المؤمنين عليه السلام يقول: «أنا عين الله، وأنا يد الله، وأنا جنب الله، وأنا باب الله» (٢).</p>
+                </div>
+                <div class="narration-box">
+                    <p>عن عبد المزاحم بن كثير عن أبي عبد الله عليه السلام قال: كان أمير المؤمنين عليه السلام يقول: «أنا علم الله، وأنا قلب الله الواعي، ولسان الله الناطق، وعين الله الناظر، وأنا جنب الله، وأنا يد الله» (٣).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 3: صفحة 3 - تنزيه الله عن الجسمية -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 3 - تنزيه الله عن الجسمية</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>وحيث أنه تعالى يجل عن الجسمية والحد والكيف فلا يصح أن يقال بأن يد الله المقصودة هنا هي اليد الجارحة، كما ورد عن محمد بن إسماعيل بن بزيع، عن عمه حمزة بن بزيع، عن أبي عبد الله عليه السلام في قول الله عز وجل: "فلما آسفونا انتقمنا منهم" فقال: إن الله عز وجل لا يأسف كأسفنا ولكنه خلق أولياء لنفسه يأسفون ويرضون وهم مخلوقون مربوبون، فجعل رضاهم رضا نفسه وسخطهم سخط نفسه، لأنه جعلهم الدعاة إليه والأدلاء عليه، فلذلك صاروا كذلك وليس أن ذلك يصل إلى خلقه، لكن هذا معنى ما قال من ذلك وقد قال: «من أهان لي ولياً فقد بارزني بالمحاربة ودعاني إليها» وقال: «من يطع الرسول فقد أطاع الله» وقال: «إن الذين يبايعونك إنما يبايعون الله، يد الله فوق أيديهم» فكل هذا وشبهه على ما ذكرت لك وهكذا الرضا، والغضب وغيرها من الأشياء مما يشاكل ذلك، ولو كان يصل إلى الله الأسف والضجر وهو الذي خلقهما وأنشأهما لجاز لقائل هذا أن يقول: إن الخالق يبيد يوماً ما، لأنه إذا دخله الغضب والضجر دخله التغيير، وإذا دخله التغيير لم يؤمن عليه الإبادة، ثم لم يعرف المكون من المكون ولا القادر من المقدور عليه، ولا الخالق من المخلوق، تعالى الله عن هذا القول علواً كبيراً، بل هو الخالق للأشياء لا لحاجة، فإذا كان لا لحاجة استحال الحد والكيف فيه، فافهم إن شاء الله(1).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 4: صفحة 4 - بيان الإمام لمعنى يده -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 4 - بيان الإمام لمعنى يده</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>فيكون بحسب هذا النص معنى أنهم يد الله أن أخذهم إعطاؤهم وبسطهم وقبضهم هو من الله تعالى. وليس العكس. ثم إن الإمام نفسه قد بين معنى قوله أنه يد الله في خطبته: «أنا الهادي، أنا المهتدي، وأنا أبو اليتامى والمساكين، وزوج الأرامل، وأنا ملجأ كل ضعيف، ومأمن كل خائف، وأنا قائد المؤمنين إلى الجنة، وأنا حبل الله المتين، وأنا عروة الله الوثقى، وكلمة الله التقوى، وأنا عين الله، ولسانه الصادق، ويده، وأنا جنب الله الذي يقول: "أن تقول نفس يا حسرتي على ما فرطت في جنب الله" وأنا يد الله المبسوطة على عباده بالرحمة والمغفرة، وأنا باب حطة، من عرفني وعرف حقي فقد عرف ربه، لأني وصي نبيه في أرضه وحجته على خلقه، لا ينكر هذا إلا راد على الله وعلى رسوله» (١) حيث قال مبيناً ذلك بقوله: «وأنا يد الله المبسوطة على عباده بالرحمة والمغفرة» (٢).</p>
+                    <p>فاليد هنا متعلقة بالرحمة والمغفرة لا غير، وهذا يتفق مع كونهم سلام الله عليهم باب رحمة الله ومغفرته، فهم يرحمنا الله وبهم يغفر لنا.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 5: صفحة 5 - فهم اليهود لليد -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 5 - فهم اليهود لليد</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>إنه حتى اليهود الذين قالوا إن يد الله مغلولة كانوا يفهمون معنى اليد على وجهها الصحيح ولم يقصدوا بها اليد الجارحة، فعن إسحاق بن عمار، عمن سمعه عن أبي عبد الله عليه السلام أنه قال في قوله الله عز وجل: (وقالت اليهود يد الله مغلولة): لم يعنوا أنه هكذا – ويقصد اليد الجارحة -، ولكنهم قالوا: قد فرغ من الأمر، فلا يزيد ولا ينقص، فقال الله جل جلاله تكذيباً لقولهم: (غلت أيديهم ولعنوا بما قالوا بل يداه مبسوطتان ينفق كيف يشاء) ألم تسمع الله عز وجل يقول: (يمحو الله ما يشاء ويثبت وعنده أم الكتاب) (1). وعن عبد الله بن قيس عن أبي الحسن الرضا عليه السلام قال: سمعته يقول: (بل يداه مبسوطتان) فقلت: له يدان هكذا، وأشرت بيدي إلى يده، فقال: لا، لو كان هكذا لكان مخلوقاً (2).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 6: صفحة 6 - رد أهل البيت على المفوضة -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 6 - رد أهل البيت على المفوضة</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>وأما مقالة المفوضة لعنهم الله فقد تبرأ منها أهل البيت عليهم السلام ولعنوا من يعتقد بها، والآن فلنذكر ما جاء عنهم في رد تلك العقيدة وإبطالها. فإن المطلع على كلمات أهل البيت عليهم السلام يجد أن كلماتهم تستنكر هذه المقالة بأشد عبارات الاستنكار، وتتبرأ ممن يرى هذا الرأي. وهذه بعض كلماتهم الرافضة لهذه المقالة بأشد العبارات.</p>
+                </div>
+                <div class="narration-box">
+                    <p>عن ياسر الخادم قال: قلت للرضا عليه السلام ما تقول في التفويض؟ فقال: إن الله تبارك وتعالى فوض إلى نبيه (ص) أمر دينه فقال: (ما آتاكم الرسول فخذوه وما نهاكم عنه فانتهوا) فأما الخلق والرزق فلا. ثم قال عليه السلام: إن الله عز وجل يقول: (الله خالق كل شيء) وهو يقول: (الله الذي خلقكم ثم رزقكم ثم يميتكم ثم يحييكم قل هل من شركائكم يفعل من ذلكم من شيء) سبحانه وتعالى عما يشركون (1).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 7: صفحة 7 - لا جبر ولا تفويض -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 7 - لا جبر ولا تفويض</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>وعن بريد بن معاوية الشامي قال: دخلت على علي بن موسى الرضا بمرو فقلت له: يا بن رسول الله روي لنا عن الصادق جعفر بن محمد عليهما السلام قال: إنه لا جبر ولا تفويض بل أمر بين أمرين فما معناه؟ قال: من زعم أن الله يفعل أفعالنا ثم يعذبنا عليها فقد قال بالجبر، ومن زعم أن الله عز وجل فوض أمر الخلق والرزق إلى حججه عليهم السلام فقد قال بالتفويض، والقائل بالجبر كافر والقائل بالتفويض مشرك. فقلت له: يا بن رسول الله فما أمر بين أمرين؟ فقال: وجود السبيل إلى إتيان ما أمروا به وترك ما نهوا عنه. فقلت له: فهل لله عز وجل مشيئة وإرادة في ذلك؟ فقال: فأما الطاعات فإرادة الله ومشيئتها الأمر بها والرضا لها والمعاونة عليها، وإرادته ومشيئته في المعاصي النهي عنها والسخط لها والخزلان عليها. قلت: فهل لله فيها القضاء؟ قال: نعم، ما من فعل يفعله العباد من خير أو شر إلا ولله فيه قضاء. قلت: ما معنى هذا القضاء؟ قال: الحكم عليهم بما يستحقونه على أفعالهم من الثواب والعقاب في الدنيا والآخرة (1).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 8: صفحة 8 - توقيع الإمام المهدي -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 8 - توقيع الإمام المهدي</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>وروى أبو الحسن علي بن أحمد الدلال القمي قال: اختلف جماعة من الشيعة في أن الله عز وجل فوض إلى الأئمة صلوات الله عليهم أن يخلقوا ويرزقوا، فقال قوم: هذا محال لا يجوز على الله تعالى، لأن الأجسام لا يقدر على خلقها غير الله عز وجل، وقال آخرون: بل الله أقدر الأئمة على ذلك وفوض إليهم فخلقوا ورزقوا، وتنازعوا في ذلك نزاعاً شديداً، فقال قائل: ما بالكم لا ترجعون إلى أبي جعفر محمد بن عثمان فتسألوه عن ذلك ليوضح لكم الحق فيه، فإنه الطريق إلى صاحب الأمر، فرضيت الجماعة بأبي جعفر وسلمت وأجابت إلى قوله، فكتبوا المسألة وأنفذوها إليه، فخرج إليهم من جهته توقيع نسخته: إن الله تعالى هو الذي خلق الأجسام، وقسم الأرزاق لأنه ليس بجسم ولا حال في جسم، ليس كمثله شيء، وهو السميع البصير. وأما الأئمة عليهم السلام، فإنهم يسألون الله تعالى فيخلق، ويسألونه فيرزق إيجاباً لمسألتهم، وإعظاماً لحقهم (1).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 9: صفحة 9 - التأكيد على الأمر بين الأمرين -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 9 - التأكيد على الأمر بين الأمرين</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>عن أحمد بن علي الأنصاري عن بريد بن معاوية الشامي قال: دخلت على علي بن موسى الرضا بمرو فقلت له: يا بن رسول الله روي لنا عن الصادق جعفر بن محمد عليهما السلام قال: إنه لا جبر ولا تفويض بل أمر بين أمرين فما معناه؟ قال: من زعم أن الله يفعل أفعالنا ثم يعذبنا عليها فقد قال بالجبر، ومن زعم أن الله عز وجل فوض أمر الخلق والرزق إلى حججه عليهم السلام فقد قال بالتفويض، والقائل بالجبر كافر والقائل بالتفويض مشرك. فقلت له: يا بن رسول الله فما أمر بين أمرين؟ فقال: وجود السبيل إلى إتيان ما أمروا به وترك ما نهوا عنه. فقلت له: فهل لله عز وجل مشيئة وإرادة في ذلك؟ فقال: فأما الطاعات فإرادة الله ومشيئتها الأمر بها والرضا لها والمعاونة عليها، وإرادته ومشيئته في المعاصي النهي عنها والسخط لها والخزلان عليها. قلت: فهل لله فيها القضاء؟ قال: نعم، ما من فعل يفعله العباد من خير أو شر إلا ولله فيه قضاء. قلت: ما معنى هذا القضاء؟ قال: الحكم عليهم بما يستحقونه على أفعالهم من الثواب والعقاب في الدنيا والآخرة (1).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 10: صفحة 12 (التسلسل يقفز) -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 12 - رجال الكشي في ذم الغلاة</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>وفي رجال الكشي عن ابن أبي عمير قال: حدثنا بعض أصحابنا قال: قلت لأبي عبد الله عليه السلام: زعم أبو هارون المكفوف أنك قلت له: إن كنت تريد القديم فذاك لا يدركه أحد، وإن كنت تريد الذي خلق ورزق فذاك محمد بن علي، فقال: كذب عليه لعنة الله ما من خالق إلا الله وحده لا شريك له، حق على الله أن يذيقنا الموت، والذي لا يهلك هو الله خالق الخلق باري البرية (1).</p>
+                </div>
+                <div class="narration-box">
+                    <p>وفي رجال الكشي عن صفوان بن يحيى عن ابن مسكان قال: دخل حجر بن زائدة وعامر بن جداعة الأزدي على أبي عبد الله عليه السلام فقالا له: جعلنا فداك إن المفضل بن عمر يقول إنكم تقدرون أرزاق العباد. فقال: والله ما يقدر أرزاقنا إلا الله، ولقد احتجت إلى طعام لعيالي فضاق صدري وأبلغت إلى الفكرة في ذلك حتى أحزت قوتهم، فعندها طابت نفسي، لعنه الله وبرئ منه، قالا: أفنلعنه ونتبرأ منه؟ قال: نعم، فلعناه وبرئنا منه، برئ الله ورسوله منه (2).</p>
+                </div>
+                <div class="narration-box">
+                    <p>عن معاوية بن وهب، قال: دخلت على أبي عبد الله (عليه السلام) فرأيت أبا الحسن موسى (عليه السلام) وله يومئذ ثلاث سنين ومعه عناق من هذه المكية وهو آخذ بخطام عليها وهو يقول لها: اسجدي لله الذي خلقك، ففعل ذلك ثلاث مرات. فقال له غلام صغير: يا سيدي، قل لها تموت. فقال له موسى (عليه السلام): ويحك أنا أحيي وأميت؟ الله يحيي ويميت (3).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 11: صفحة 13 -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 13 - إحياء عيسى للموتى</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>وفي الخبر: وأعطى عيسى منها حرفين، وكان يحيي بهما الموتى ويبرئ بهما الأكمه والأبرص (١). فالإحياء بهذه الحروف وليس مثل فعل الله.</p>
+                </div>
+                <div class="narration-box">
+                    <p>وفي الخبر سأل العالم: هل كان عيسى ابن مريم أحيى أحداً بعد موته حتى كان له أكل ورزق ومدة وولد؟ فقال: نعم إنه كان له صديق مواخل له في الله تبارك وتعالى وكان عيسى (عليه السلام) يمر به وينزل عليه وإن عيسى غاب عنه حيناً ثم مر به ليسلم عليه فخرجت إليه أمه فسألها عنه، فقالت: مات يا رسول الله، فقال: أفتحبين أن تراه؟ قالت: نعم، فقال لها: فإذا كان غداً فآتيك حتى أحييه لك بإذن الله تبارك وتعالى فلما كان من الغد أتاها فقال لها: انطلقي معي إلى قبره، فانطلقا حتى أتيا قبره فوقف عليه عيسى (عليه السلام) ثم دعا الله عز وجل فانفرج القبر وخرج ابنها حياً فلما رأته أمه ورآها بكيا فرحمهما عيسى (عليه السلام) فقال له عيسى: أتحب أن تبقى مع أمك في الدنيا؟ فقال: يا نبي الله بأكل ورزق ومدة أم بغير أكل ولا رزق ولا مدة؟ فقال له عيسى (عليه السلام): بأكل ورزق ومدة وتعمر عشرين سنة وتزوج ويولد لك؟ قال: نعم إذا، قال: فدفعه عيسى إلى أمه فعاش عشرين سنة وتزوج وولد له (٢).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 12: صفحة 14 -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 14 - إحياء عيسى بالدعاء</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>فإحياء عيسى للميت هو بالدعاء إلى الله فيحييه. وليس أن يحييه هو بنفسه كما يقول المفوضة.</p>
+                <p>ومما أوردنا من الروايات يتضح أن هذا القول – أعني القول بأن الأئمة يخلقون ويرزقون لأنهم يد الله – هو من أقاويل الغالة الباطلة وأن الأئمة قد تبرأوا ممن يقول به، وأن محكمات حديثهم واضحة في نفي ذلك عنهم، وأن كل ما يستدل به هؤلاء ما هي إلا متشابهات لا تصلح كدليل مقابل المحكم من قولهم، أو هي عمومات محكومة بما ورد عن الأئمة من حصر الخلق والرزق به تعالى، على سبيل المخصص لتلك العمومات؟</p>
+                <p>فإذا ثبت أن أحداً يقول بهذه المقالة وهي مقالة الغالة فما التكليف تجاهه؟</p>
+                <div class="narration-box">
+                    <p>وعن أبي هاشم الجعفري قال: سألت أبا الحسن الرضا عليه السلام عن الغالة والمفوضة فقال: الغالة كفار والمفوضة مشركون من جالسهم أو خالطهم أو آكلهم أو شاربهم أو واصلهم أو زوجهم أو تزوج منهم أو أمنهم أو ائتمنهم على أمانة أو صدق حديثهم أو أعانهم بشطر كلمة خرج من ولاية الله وولاية محمد وولايتنا أهل البيت (1).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 13: صفحة 15 -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 15 - البراءة من الغلاة</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>وقال الصادق عليه السلام: من قال بالتشبيه والجبر فهو كافر مشرك ونحن منه براء في الدنيا والآخرة يا ابن خالد إنما وضع الأخبار عنا في التشبيه والجبر الغالة الذين صغروا عظمة الله، فمن أحبهم فقد أبغضنا، ومن أبغضهم فقد أحبنا، ومن والاهم فقد عادانا، ومن عاداهم فقد والانا، ومن وصلهم فقد قطعنا، ومن قطعهم فقد وصلنا، ومن جفاهم فقد برنا، ومن برهم فقد جفانا، ومن أكرمهم فقد أهاننا، ومن أهانهم فقد أكرمنا، ومن قبلهم فقد ردنا، ومن ردهم، فقد قبلنا، ومن أحسن إليهم فقد أساء إلينا، ومن أساء إليهم فقد أحسن إلينا، ومن صدقهم فقد كذبنا، ومن كذبهم فقد صدقنا، ومن أعطاهم فقد حرمنا ومن حرمهم فقد أعطانا، يا ابن خالد من كان من شيعتنا فلا يتخذن منهم ولياً ولا نصيرا (1).</p>
+                </div>
+                <div class="narration-box">
+                    <p>عن ابن أبي عمير، عن المفضل بن مزيد، قال، قال أبو عبد الله عليه السلام: وذكر أصحاب أبي الخطاب والغالة، فقال لي: يا مفضل لا تقاعدوهم ولا تواكلوهم ولا تشاربوهم ولا تصافحوهم ولا تؤاثروهم (2).</p>
+                </div>
+                <div class="narration-box">
+                    <p>عن الإمام أبي عبد الله جعفر بن محمد الصادق عليهما السلام قال: «أذى ما يخرج به الرجل عن الإيمان أن يجلس إلى غالٍ فيستمع إلى حديثه ويصدقه على قوله، إن أبي حدثني عن أبيه عن جده (عليهم السلام) أن رسول الله (صلى الله عليه وآله) قال: صنفان من أمتي لا نصيب لهم في الإسلام، الغُلاة والقدرية» (3).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البطاقة 14: صفحة 16 -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">صفحة 16 - التوقيع الشريف</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>وفي التوقيع الصادر من الناحية المقدسة: وأما أبو الخطاب محمد بن أبي زينب الأجدع فملعون وأصحابه ملعونون فلا تجالس أهل مقالتهم فإني منهم برئ وآبائي عليهم السلام منهم براء (١).</p>
+                    <p>فهذه الروايات تصرح بالنهي عن مجالسة الغلاة وتصديق كلامهم، وإن تصديق كلامهم يخرج من الإيمان، كيف لا وهم يمتازون بالكذب بحيث يفوق كذبهم قدرات الشيطان. فعن ابن أبي عمير، عن هشام بن سالم، عن أبي عبد الله وذكر الغلاة، فقال: إن فيهم من يكذب حتى أن الشيطان ليحتاج إلى كذبه (٢).</p>
+                </div>
+                <div class="narration-box" style="background: rgba(255,215,0,0.15);">
+                    <p class="footer-dua" style="margin:0; background:transparent;">اللهم سلمنا وأطعنا لك وآل رسولك. اللهم إنا نبرأ إليك من كل مغال ونلعنه كما لعنته ولعنه أهل بيت نبيك، اللهم إنا نقاطعهم ونكذب كل قولهم ولا نصدقهم على قول. والحمد لله رب العالمين وصلى الله على محمد وآله الطاهرين</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- قسم الباحث المتهجد -->
+<section id="abomogtahid" class="section-view">
+    <div class="back-button" onclick="showPortal()">
+        <i class="fas fa-arrow-right"></i> العودة إلى البوابة
+    </div>
+    <h2 class="section-title">بحوث المتهجد</h2>
+    <div class="elegant-placeholder">
+        <div class="placeholder-icon"><i class="fas fa-moon"></i></div>
+        <h3 class="placeholder-title">محراب الباحث المتهجد</h3>
+        <p class="placeholder-text">قيد الإعداد والتهجد... قريباً تضيء هذه المساحة بأنوار المناجاة والبحوث العقدية الخاشعة. ترقبوا الإطلالة المباركة.</p>
+        <div class="placeholder-decoration"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+    </div>
+</section>
+
+<!-- ========== قسم الباحث محمد المهدي بن علي الموسوي (كامل) ========== -->
+<section id="mohamedalmahdi" class="section-view">
+    <div class="back-button" onclick="showPortal()">
+        <i class="fas fa-arrow-right"></i> العودة إلى البوابة
+    </div>
+    <h2 class="section-title">رسالة كشف القناع</h2>
+    <h3 style="text-align: center; color: var(--gold-rich); margin-bottom: 40px; font-family: 'Amiri';">عن مخصوصية خلق الاستحالة والاختراع</h3>
+
+    <!-- المقدمة -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">المقدمة</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>بسم الله الرحمن الرحيم، اللهم صل على محمد وآل محمد الطيبين الطاهرين والعن أعداءهم أجمعين.</p>
+                <p>ظهر فكر الغلو في هذا الوقت، وهو إعطاء خلق الاستحالة والاختراع لغير الله، وهما من مختصات الله تعالى. فمن أعطى لعبد شيئًا لا يستحقه، فقد أصبح مغاليًا في هذا العبد. وسنستبين من كلام الثقلين (الكتاب والعترة) صحة كلامنا وبطلان كلام كل من غالى في العترة.</p>
+                <p>واعلم أني سأنقل روايات من كتب الغلاة، فهذا لا يعني اعتقادي بها، بل سأعتمد في الرد على متن الرواية نفسها.</p>
+                <div class="signature">محمد المهدي بن علي الموسوي</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الباب الأول: أقسام الخلق -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">الباب الأول: أقسام الخلق</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <div class="narration-box">
+                    <p>في رواية طويلة عن علي بن أبي طالب (عليه السلام): «...وسألوه صلوات الله عليه عن متشابه الخلق، فقال: هو على ثلاثة أوجه ورابع. فمنه خلق الاختراع، لقوله سبحانه: "خلق السماوات والأرض في ستة أيام". وأما خلق الاستحالة، فقوله تعالى: "يخلقكم في بطون أمهاتكم خلقًا من بعد خلق في ظلمات ثلاث"، وقوله تعالى: "هو الذي خلقكم من تراب ثم من نطفة ثم من علقة ثم من مضغة مخلقة وغير مخلقة لنبين لكم ونقر في الأرحام ما نشاء". وأما خلق التقدير، فقوله لعيسى عليه السلام: "وإذ تخلق من الطين كهيئة الطير" إلى آخر الآية. وأما خلق التغيير، فقوله تعالى: "ولآمرنهم فليغيرن خلق الله".»</p>
+                </div>
+                <p>فالخلق إذن ثلاثة أقسام (الاختراع، الاستحالة، التقدير). أما الأخير فهو خلق تغيير، ولا يهمنا في هذه الرسالة، لذا لن أذكره وسأقتصر على الأقسام الثلاثة: خلق لا من شيء (الاختراع)، وخلق من شيء إلى شيء (الاستحالة)، وخلق من شيء (التقدير) وغيرها.</p>
+                <p>ورد في تفسير النعماني بإسناده عن الصادق (عليه السلام) قال: «سئل أمير المؤمنين (عليه السلام) عن متشابه الخلق، فقال: هو على ثلاثة أوجه. فمنه خلق الاختراع كقوله سبحانه: "خلق السماوات والأرض في ستة أيام". وخلق الاستحالة، قوله تعالى: "يخلقكم في بطون أمهاتكم خلقًا من بعد خلق في ظلمات ثلاث"، وقوله: "هو الذي خلقكم من تراب ثم من نطفة" – الآية. وأما خلق التقدير، فقوله لعيسى: "وإذ تخلق من الطين".»</p>
+                <p>يتضح لنا أن خلق الشيء لا من شيء (من العدم) هو الاختراع، وتغيير حالة الشيء من مرحلة إلى أخرى هو الاستحالة، وخلق الشيء من شيء هو خلق تقدير.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- الباب الثاني: مخصوصية خلق الاختراع والاستحالة -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">الباب الثاني: مخصوصية خلق الاختراع والاستحالة</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>ورد في عيون أخبار الرضا (عليه السلام): ابن عبدوس، عن ابن قتيبة، عن الفضل، عن الرضا (عليه السلام) فيما كتب للمأمون: «من محض الإسلام أن الله تبارك وتعالى لا يكلف نفسًا إلا وسعها، وأن أفعال العباد مخلوقة لله خلق تقدير لا خلق تكوين، والله خالق كل شيء، ولا نقول بالجبر ولا بالتفويض»<span class="ref-tag">[1]</span>.</p>
+
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">مناقشة قوله (عليه السلام): "أفعال العباد مخلوقة خلق تقدير"</strong>
+                    <p>لاحظ أن أفعال العباد هي خلق تقدير، فيتبين لنا أن خلق التقدير يمكن أن يُعطى لأي شخص، وهذا قد حدث. فمثلًا، خلق عيسى (عليه السلام) للطير من طين هو خلق تقدير معطى.</p>
+                </div>
+
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">مناقشة قوله (عليه السلام): "لا خلق تكوين"</strong>
+                    <p>لاحظ نفي خلق التكوين عن العباد. وقد ذكرنا سابقًا أن هناك ثلاثة أقسام: اختراع، واستحالة، وتقدير. فعندما أُعطي خلق التقدير للعباد، ونُفي عنهم الخلقان الآخران (الاختراع والاستحالة)، فهذا يعني أن هذين النوعين مختصان بالله.</p>
+                    <p>لا يحاول أحد أن يقول إن الأئمة (عليهم السلام) ليسوا عبادًا لله ليدفع هذا الكلام، فقد ورد في دعاء الإمام الرضا (عليه السلام): «اللهم إنا عبيدك وأبناء عبيدك»<span class="ref-tag">[2]</span>. فلا مجال لإثبات كلامكم الكفري، إنما هي تخبطات وأكاذيب تريدون بها إظهار إحدى فرق الضلال التي اندثرت من عهد عبد الله بن سبأ.</p>
+                </div>
+
+                <p>كذلك نقل الشيخ الصدوق (رضوان الله عليه) عن عبد الله بن سنان، عن أبي عبد الله (عليه السلام) قال: «قال في الربوبية العظمى والإلهية الكبرى: لا يكون الشيء لا من شيء إلا الله، ولا ينقل الشيء من جوهريته إلى جوهر آخر إلا الله، ولا ينقل الشيء من الوجود إلى العدم إلا الله»<span class="ref-tag">[3]</span>.</p>
+
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">مناقشة قوله (عليه السلام): "لا يكون الشيء لا من شيء إلا الله"</strong>
+                    <p>برجوعنا إلى أقسام الخلق نعلم أن هذه الجملة تشير إلى خلق الاختراع. لاحظ استخدام أداة الاستثناء "إلا"، مما يدل على أنه لا أحد يقوم بخلق الاختراع سوى الله.</p>
+                </div>
+
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">مناقشة قوله (عليه السلام): "ولا ينقل الشيء من جوهريته إلى جوهر آخر إلا الله"</strong>
+                    <p>وهذا هو خلق الاستحالة، وقد استُخدمت أيضًا أداة الاستثناء "إلا"، فنفس الكلام ينطبق: هذا النوع من الخلق مختص بالله وحده. فالإمام (عليه السلام) جعل هذه الأمور (أنواع الخلق) لله وحده.</p>
+                </div>
+
+                <p>وكذلك قال أمير المؤمنين (عليه السلام): «كنت أنا الأذان في الناس بالحج، وقوله: "وأذن في الناس بالحج" أي أعلمهم وادعهم. فمعنى "الله" أنه يخرج الشيء من حد العدم إلى حد الوجود ويخترع الأشياء لا من شيء، وكل مخلوق دونه يخترع الأشياء من شيء إلا الله»<span class="ref-tag">[4]</span>. فهذه الجملة أيضًا تثبت أن الاختراع (الإيجاد من عدم) مختص بالله، وأما المخلوق فيخترع (أي يصنع) الأشياء من شيء موجود. وهذا الذي قاله أمير المؤمنين (عليه السلام) يوافق كلامنا وينفي كلام المخالفين.</p>
+
+                <p>نرد عليهم أيضًا بما روي: علي بن إبراهيم، عن أبيه، عن علي بن أسباط عنهم (عليهم السلام) قال: «فيما وعظ الله عز وجل به عيسى (عليه السلام): يا عيسى أنا ربك ورب آبائك، اسمي واحد وأنا الأحد المتفرد بخلق كل شيء وكل شيء من صنعي وكل إلي راجعون»<span class="ref-tag">[5]</span>. فهنا يبين الله (عز وجل) أنه المتفرد بخلق كل شيء. فإذا تفرد الله بشيء، استحال أن يعطيه لغيره أو يفوضه. ومن قال إن الله فوض هذا الخلق لغيره فقد أشرك.</p>
+
+                <div class="narration-box">
+                    <i class="fas fa-star" style="color: var(--gold-primary); margin-left: 10px;"></i>
+                    <span>وَلَئِن سَأَلْتَهُم مَّنْ خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ لَيَقُولُنَّ اللَّهُ</span>
+                </div>
+                <div class="narration-box">
+                    <i class="fas fa-star" style="color: var(--gold-primary); margin-left: 10px;"></i>
+                    <span>اللَّهُ خَالِقُ كُلِّ شَيْءٍ</span>
+                </div>
+                <div class="narration-box">
+                    <i class="fas fa-star" style="color: var(--gold-primary); margin-left: 10px;"></i>
+                    <span>بَدِيعُ السَّمَاوَاتِ وَالْأَرْضِ وَإِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُن فَيَكُونُ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الباب الثالث: رد شبهات -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">الباب الثالث: رد شبهات القائلين بعدم اختصاص الله بخلق الاستحالة والاختراع</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p><i class="fas fa-info-circle" style="color: #b48b5a;"></i> ملاحظة: في هذا الباب، سأذكر أشهر الروايات التي يثير حولها الغلاة جدلًا. هناك روايات أخرى لن أرد عليها لضعف الاستدلال بها.</p>
+
+                <!-- الاستدلال الأول -->
+                <div style="color: var(--gold-bright); font-size: 1.5rem; margin: 25px 0 15px;">الاستدلال الأول: استدلال المفوضة برواية تفيد قابلية الملائكة على الخلق</div>
+                <div class="narration-box">
+                    <p>عن زرارة عن أبي جعفر (عليه السلام) قال: «إن الله عز وجل إذا أراد أن يخلق النطفة التي أخذ عليها الميثاق في صلب آدم أو ما يبدو له فيه ويجعلها في الرحم، حرك الرجل للجماع وأوحى إلى الرحم أن افتحي بابك حتى يلج فيك خلقي وقضائي النافذ وقدرى، فتفتح الرحم بابها فتصل النطفة إلى الرحم فتردد فيه أربعين يومًا، ثم تصير علقة أربعين يومًا، ثم تصير مضغة أربعين يومًا، ثم تصير لحمًا تجري فيه عروق مشتبكة، ثم يبعث الله ملكين خالقين»<span class="ref-tag">[9]</span>.</p>
+                </div>
+                <p>يظن المغالي جاهلًا أن هذا دليل على أن غير الله يخلق، ويقول إن الله يخلق عبر ملائكة.</p>
+
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">بيان أن خلق الملكين هو خلق تقدير لا استحالة:</strong>
+                    <p><strong>الوجه الأول:</strong> قال تعالى: "يَخْلُقُكُمْ فِي بُطُونِ أُمَّهَاتِكُمْ خَلْقًا مِّن بَعْدِ خَلْقٍ"<span class="ref-tag">[10]</span>، فظاهر الآية يدل على خلق متصل متتالٍ. لو أخذنا بالرواية التي تجعل لكل مرحلة أربعين يومًا، لما كان الخلق متتاليًا بهذا المعنى. وجاء في بيان الشيخ محمد باقر المجلسي: «وقد مر أن الخلق المنسوب إلى الملك بمعنى التقدير والتصوير والتخطيط، كما هو معناه المعروف في أصل اللغة». إذن، خلق الملكين هو خلق تقدير وليس خلق استحالة. فخلق الاستحالة مختص بالله.</p>
+                    <p><strong>الوجه الثاني:</strong> لو سلمنا جدلًا بأن الملكين "يخلقان" بهذا المعنى، فهذا لا يعني أنهما أفضل من الإمام (عليه السلام). أليس علي بن أبي طالب (عليه السلام) وُلد في الكعبة؟ فهل ذلك يجعله أفضل من النبي الأكرم (صلى الله عليه وآله وسلم)؟ بالطبع لا. وجود مخصوصية لشخص لا تعني أنه أفضل ممن لم يُعط تلك المخصوصية.</p>
+                    <p><strong>الوجه الثالث:</strong> لو سلمنا بأن الملكين خالقان، فهما مخلوقان من أجل آل البيت (عليهم السلام) وفي خدمتهم، وعلى رأس الخلق كلهم الأئمة المعصومون. فكيف يكون المخلوق للخدمة أفضل من المخدوم؟</p>
+                    <p>وبالجملة، تتضح دلالة الرواية على أن الخلق هنا هو خلق تقدير.</p>
+                </div>
+
+                <p>ويؤكد ذلك ما روي عن أبي جعفر (عليه السلام): «إن الله عز وجل فوض الأمر إلى ملك من الملائكة، فخلق سبع سماوات وسبع أرضين وأشياء، فلما رأى الأشياء قد انقادت له قال: من مثلي؟ فأرسل الله عز وجل نارية من نار. قلت: وما نارية من نار؟ قال: نار ألجمته، فاستقبلها بجميع ما خلق حتى وصلت إليه لما دخله العجب»<span class="ref-tag">[11]</span>.</p>
+
+                <p>أنقل هنا إلزام الشيخ الحر العاملي (رضوان الله عليه) حول هذه الرواية، قال: «فيه إشكال: ثالثها: أنه يدل على التفويض بمعنى أن الله فوض أمر الخلق إلى غيره، والأحاديث دالة على بطلانه، والأصحاب متفقون على ذلك، فقد أنكروا على من ادعى أن الله فوض أمر الخلق والرزق إلى محمد وآله (صلوات الله عليهم) وسموهم المفوضة».</p>
+                <p><strong>والجواب:</strong> أن الأحاديث التي تنكر التفويض إنما تنفيه بطريق العموم، أي تفويض مجموع الخلق والرزق، وليس تفويض بعض الأمور. ألا ترى أنهم (الأئمة) يقولون بصدور أفعال العباد عنهم؟ ألا ترى إلى قوله تعالى: "فَتَبَارَكَ اللَّهُ أَحْسَنُ الْخَالِقِينَ"<span class="ref-tag">[12]</span>؟ وإلى ما روي في عدة أخبار أن الله يبعث إلى الجنين ملكين خالقين يصوران بما يأمرهما؟ إلى غير ذلك من الأحاديث الكثيرة التي تدل على أن للخلق معان متعددة. فلعل معنى الخلق المنفي (عن الأئمة) هو غير معنى الخلق المثبت (للملائكة أو لعباد الله كعيسى عليه السلام). فالخلق بمعنى إنشاء صورة خاصة ونحو ذلك من الأعراض، كالصور التي كان يصنعها عيسى (عليه السلام) من الطين، أو كالصور التي يصنعها أحدنا من طين أو شمع، هي من الأعراض. وقد دلت الأدلة العقلية والنقلية على أن الله هو المختص بخلق الأجسام والأرواح والعقول وغيرها من الجواهر.</p>
+
+                <p>وقد روي أن الإمام الصادق (عليه السلام) أنكر على رجل من المفوضة واحتج عليه بقوله تعالى: "أَمْ جَعَلُوا لِلَّهِ شُرَكَاءَ خَلَقُوا كَخَلْقِهِ فَتَشَابَهَ الْخَلْقُ عَلَيْهِمْ قُلِ اللَّهُ خَالِقُ كُلِّ شَيْءٍ وَهُوَ الْوَاحِدُ الْقَهَّارُ"<span class="ref-tag">[13]</span>، فأفحم الرجل ولم يحر جوابًا. ومثله كثير. مع احتمال أن يكون الله هو الذي يخلق الصورة عند فعل العبد، ولا يكون العبد فاعلًا لتلك الصورة حقيقة.</p>
+
+                <p><strong>إشكال:</strong> عصمة الملائكة مما دل عليه النص المتواتر وإجماع الإمامية، وهذا الحديث (الذي ذكر دخول العجب على الملك) ينافيها.<br>
+                <strong>والجواب:</strong> الحديث ليس صريحًا في أن ذلك الملك عُذب وأحرقته النار، بل قارنته النار تخويفًا له على ترك الأولى، كما ورد في شأن بعض المعصومين (عليهم السلام) في كتب كتنزيه الأنبياء. ووصول النار إلى نفسه لا يستلزم الإحراق. ولا نسلم أن جميع مراتب العجب محرمة، فأدنى مراتبه السرور بالحسنة والعبادة وهو محمود شرعًا ما لم يترتب عليه مفسدة. فعل ذلك الملك كان من هذا القبيل.</p>
+
+                <p><strong>إشكال آخر:</strong> المشهور بين العلماء استحالة الخرق والالتئام في الأفلاك.<br>
+                <strong>والجواب:</strong> هذا المشهور ليس عليه دليل قطعي، كيف والمعراج النبوي المتواتر يكذبه؟ وما قيل هناك يقال هنا، والله أعلم.</p>
+
+                <p>وقد استدلوا على جواز الخرق والالتئام في الأفلاك بأنها حادثة ويجوز عليها العدم، فكيف لا يجوز عليها الخرق والالتئام؟ وقد حاول بعض المتأخرين جعل هذا دليلًا على قاعدة "الواحد لا يصدر عنه إلا واحد" لبعض الحكماء.</p>
+                <p>فأقول: هذا الحديث إنما تضمن خلق سبع سماوات وسبع أرضين، ولا دلالة فيه على سائر الأشياء. وأيضًا، فهذه النار التي أرسلت على الملك ليست من خلقه هو، بل هي مخلوقة لله، وهذا يبطل دعوى أن الملك خلق كل شيء. وهذه الرواية تعارض الكثير من الروايات المعتبرة عندنا والتي تقول بعصمة الملائكة، وهذا ما أوافق فيه الشيخ الحر العاملي.</p>
+
+                <p>من الروايات الدالة على عصمة الملائكة قول الإمام (عليه السلام): «معاذ الله من ذلك، إن ملائكة الله تعالى معصومون محفوظون من الكفر والقبائح بلطف الله تعالى، قال الله عز وجل فيهم: "لَا يَعْصُونَ اللَّهَ مَا أَمَرَهُمْ وَيَفْعَلُونَ مَا يُؤْمَرُونَ"»<span class="ref-tag">[14]</span>.</p>
+
+                <hr style="border: 1px solid rgba(212, 175, 55, 0.2); margin: 30px 0;">
+
+                <!-- الاستدلال الثاني -->
+                <div style="color: var(--gold-bright); font-size: 1.5rem; margin: 25px 0 15px;">الاستدلال الثاني: استدلال المفوضة بقصة قنبر وفضة المزعومة</div>
+                <p>يزعمون أن المعصومين (عليهم السلام) يخلقون جميع أنواع الخلق مطلقًا، مستدلين بقصة في "عيون المعجزات" عن أبي خالد الكابلي، قال: قال الإمام علي بن الحسين زين العابدين (عليه السلام): لما سألناه عن هذه الآية: {وَجَعَلْنَا فِي السَّمَاءِ بُرُوجًا وَزَيَّنَّاهَا لِلنَّاظِرِينَ}<span class="ref-tag">[15]</span> قال: «إن قنبرًا - مولى علي (عليه السلام) - أتى منزله يسأل عنه، وخرجت إليه جارية يقال لها فضة. قال قنبر: فقلت لها: أين علي بن أبي طالب؟ - وكانت جاريته - فقالت: في البروج. قال قنبر: وأنا لا أعرف لأمير المؤمنين بروجًا - فقلت: وما يصنع في البروج؟ قالت: هو في البروج الأعلى، يقسم الآجال، ويمد الأرزاق، ويعين، ويخلق الخلق، ويميت ويحيي، ويعز ويذل...» الحديث<span class="ref-tag">[16]</span>.</p>
+
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">الرد على هذا الاستدلال من وجوه:</strong>
+                    <p><strong>الوجه الأول:</strong> هذه الرواية منسوبة لكتاب "عيون المعجزات"، ولم أعثر عليها في هذا الكتاب. فهي رواية مبتدعة لا أصل لها. فلو ادعى مدع وجود رواية في الكافي عن أمير المؤمنين (عليه السلام) قال: "أنا الله"، ثم ذهبت إلى الكافي فلم تجدها، لم تكن تلك الرواية حجة.</p>
+                    <p><strong>الوجه الثاني:</strong> هناك روايات صحيحة وصريحة تنفي التفويض بهذا المعنى. عن ياسر الخادم قال: قلت للرضا (عليه السلام) ما تقول في التفويض؟ فقال: «إن الله تبارك وتعالى فوض إلى نبيه (صلى الله عليه وآله) أمر دينه فقال: "مَا آتَاكُمُ الرَّسُولُ فَخُذُوهُ وَمَا نَهَاكُمْ عَنْهُ فَانتَهُوا"<span class="ref-tag">[17]</span>، فأما الخلق والرزق فلا»<span class="ref-tag">[18]</span>.</p>
+                    <p>وسئل الإمام الرضا (عليه السلام) عن معنى "لا جبر ولا تفويض بل أمر بين أمرين" فقال: «من زعم أن الله يفعل أفعالنا ثم يعذبنا عليها فقد قال بالجبر، ومن زعم أن الله عز وجل فوض أمر الخلق والرزق إلى حججه (عليهم السلام) فقد قال بالتفويض، والقائل بالجبر كافر، والقائل بالتفويض مشرك...»<span class="ref-tag">[19]</span>.</p>
+                    <p>وروي عن زرارة أنه قال للصادق (عليه السلام): إن رجلًا من ولد عبد الله بن سبأ يقول بالتفويض (ويعني به أن الله فوّض الخلق والرزق إلى النبي والأئمة). فقال الإمام (عليه السلام) مستنكرًا: «وما التفويض؟» فلما شرح له زرارة معتقدهم، قال الإمام: «كذب عدو الله، إذا رجعت إليه فاقرأ عليه الآية التي في سورة الرعد: {أَمْ جَعَلُوا لِلَّهِ شُرَكَاءَ خَلَقُوا كَخَلْقِهِ فَتَشَابَهَ الْخَلْقُ عَلَيْهِمْ قُلِ اللَّهُ خَالِقُ كُلِّ شَيْءٍ وَهُوَ الْوَاحِدُ الْقَهَّارُ}<span class="ref-tag">[20]</span>. فانصرفت إلى الرجل فأخبرته بما قال الصادق (عليه السلام) فكأنما ألقمته حجرًا - أو قال: فكأنما خرس»<span class="ref-tag">[21]</span>.</p>
+                    <p>وكان الإمام الرضا (عليه السلام) يقول في دعائه: «اللهم إني أبرأ إليك من الحول والقوة، فلا حول ولا قوة إلا بك. اللهم إني أبرأ إليك من الذين ادعوا لنا ما ليس لنا بحق. اللهم إني أبرأ إليك من الذين قالوا فينا ما لم نقله في أنفسنا. اللهم لك الخلق ومنك الأمر، وإياك نعبد وإياك نستعين. اللهم أنت خالقنا وخالق آبائنا الأولين وآبائنا الآخرين»<span class="ref-tag">[22]</span>. فكل هذه النصوص تصرح بنفي خلق الرزق والتكوين عن الأئمة (عليهم السلام).</p>
+                    <p><strong>الوجه الثالث:</strong> ورد عن أبي عبد الله (عليه السلام) في تفسير الآية نفسها {وَلَقَدْ جَعَلْنَا فِي السَّمَاءِ بُرُوجًا} قال: «منازل الشمس والقمر»، {وَزَيَّنَّاهَا لِلنَّاظِرِينَ} قال: «بالكواكب»<span class="ref-tag">[23]</span>. فتفسير الإمام الصادق (عليه السلام) للآية يخالف تمامًا ما روته الجارية فضة في القصة المذكورة. والرواية المنسوبة لتفسير القمّي (في تفسير الآية) موجودة في كتاب تفسير القمي، أما رواية الجارية فضة فليست موجودة في عيون المعجزات. فترجح رواية تفسير القمي.</p>
+                </div>
+
+                <hr style="border: 1px solid rgba(212, 175, 55, 0.2); margin: 30px 0;">
+
+                <!-- الاستدلال الثالث -->
+                <div style="color: var(--gold-bright); font-size: 1.5rem; margin: 25px 0 15px;">الاستدلال الثالث: قول أمير المؤمنين (عليه السلام): «أنا أمسكت السموات بأمر ربي»<span class="ref-tag">[24]</span></div>
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">الرد على وجوه:</strong>
+                    <p><strong>الوجه الأول:</strong> هذه الرواية تعارض ما ورد في الخطبة التطنجية (التي لا أعتقد بها شخصيًا، لكن المغالي يعتقد بها) حيث يقول أمير المؤمنين (عليه السلام) فيها: «خلق السموات بلا دعائم، وأقامها بغير قوائم»<span class="ref-tag">[25]</span>. فيظهر تناقض واضح بين الروايتين لو أخذنا بظاهرهما.</p>
+                    <p><strong>الوجه الثاني:</strong> يمكن حمل الرواية على معنى أن الله أمسك السموات، ونسب الفعل إلى الإمام (عليه السلام) لأنه سبب من الأسباب أو لأنه ولي الأمر. وهذا ما تؤكده رواية أخرى عن علي بن الحسين (عليهما السلام) قال: «نحن أئمة المسلمين، وحجج الله على العالمين، وسادة المؤمنين، وقادة الغر المحجلين، وموالي المؤمنين، ونحن أمان أهل الأرض كما أن النجوم أمان لأهل السماء، ونحن الذين بنا يمسك الله السماء أن تقع على الأرض إلا بإذنه، وبنا يمسك الأرض أن تميد بأهلها، وبنا ينزل الغيث، وبنا ينشر الرحمة، ويخرج بركات الأرض، ولولا ما في الأرض منا لساخت بأهلها»<span class="ref-tag">[26]</span>. فهنا يتضح أن المقصود هو جعلهم (عليهم السلام) سببًا ووسيلة لحفظ الكون بإذن الله، لا أنهم الخالقون أو المسيطرون استقلالًا، وهذا بعيد كل البعد عن مقصد الغلاة.</p>
+                </div>
+
+                <hr style="border: 1px solid rgba(212, 175, 55, 0.2); margin: 30px 0;">
+
+                <!-- الاستدلال الرابع -->
+                <div style="color: var(--gold-bright); font-size: 1.5rem; margin: 25px 0 15px;">الاستدلال الرابع: رواية منسوبة للإمام الصادق (عليه السلام): «فكل ما كان في القرآن من جمع: نحن فعلنا، وإنا صنعنا، فنحن والله أولئك الرسل الذين نكتب ونقسم بأمره تعالى وإرادته ومشيئته»<span class="ref-tag">[27]</span></div>
+                <p>يزعم الغلاة أن كل آية ورد فيها لفظ الجمع "نحن" أو "إنا" تخص أهل البيت (عليهم السلام).</p>
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">الرد على وجوه:</strong>
+                    <p><strong>الوجه الأول:</strong> هذه الرواية تسقط عند عرضها على القرآن، لأنها تعارض آيات كثيرة يستحيل أن تكون في أهل البيت (عليهم السلام). مثل قوله تعالى: "وَقَالُوا كُونُوا هُودًا أَوْ نَصَارَى تَهْتَدُوا قُلْ بَلْ مِلَّةَ إِبْرَاهِيمَ حَنِيفًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ"<span class="ref-tag">[28]</span>. فلفظ الجمع "مشركين" هنا، فهل يعني ذلك أن أهل البيت مشركون؟ حاشاهم الله. وكذلك قوله تعالى: "ثُمَّ لَمْ تَكُن فِتْنَتُهُمْ إِلَّا أَن قَالُوا وَاللَّهِ رَبِّنَا مَا كُنَّا مُشْرِكِينَ"<span class="ref-tag">[29]</span>. لاحظ كلمة "مشركين" بصيغة الجمع، فهل ينطبق على أهل البيت؟ وكذا آيات كـ "بِمَا أَنزَلَ اللَّهُ فَأُولَٰئِكَ هُمُ الْكَافِرُونَ"<span class="ref-tag">[30]</span>، فهل يعني أنهم كافرون؟ حاشاهم. إذن، هذا الاعتقاد ساقط.</p>
+                    <p><strong>الوجه الثاني:</strong> البعض يحاول تبرير ذلك بأن المقصود بـ "نحن" هو التعظيم أو يشمل الله وملائكته، لكن هذه محاولة فاشلة. فقد ورد في القرآن على لسان المنافقين: "إِنَّمَا نَحْنُ مُسْتَهْزِئُونَ"<span class="ref-tag">[31]</span>. فلو أخذنا بفهم المغالي، لزم أن يكون أهل البيت (عليهم السلام) هم المستهزئون – وحاشاهم – فتسقط الرواية أيضًا.</p>
+                </div>
+
+                <hr style="border: 1px solid rgba(212, 175, 55, 0.2); margin: 30px 0;">
+
+                <!-- الاستدلال الخامس -->
+                <div style="color: var(--gold-bright); font-size: 1.5rem; margin: 25px 0 15px;">الاستدلال الخامس: رؤية علي بن الحسين (عليه السلام) ذات الأجنحة</div>
+                <p>يروي الغلاة: «رأيت علي بن الحسين (عليه السلام) وقد نبت له أجنحة وريش، فطار ثم نزل، فقال: رأيت الساعة جعفر بن أبي طالب في أعلى عليين. فقلت: وهل تستطيع أن تصعد؟ فقال: نحن صنعناها فكيف لا نقدر أن نصعد إلى ما صنعناه؟! نحن حملة العرش، ونحن على العرش، والعرش والكرسي لنا»<span class="ref-tag">[32]</span>.</p>
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">الرد:</strong>
+                    <p><strong>الوجه الأول:</strong> سقوط الرواية لمخالفتها للكثير من الروايات المعتبرة.</p>
+                    <p><strong>الوجه الثاني:</strong> العبارة "نحن صنعناها" تعود على السماء حسب سياق الرواية. فلو سلمنا جدلًا باعتقاد الغلاة، لكان أهل البيت (عليهم السلام) قد خلقوا سماءً واحدة فقط، ولم يخلقوا الكون كله.</p>
+                    <p><strong>الوجه الثالث:</strong> يمكن تأويل "صنعناها" بمعنى أننا أمسكناها أو زيناها أو جعلناها في منازل، كما مر في الرد السابق.</p>
+                </div>
+
+                <hr style="border: 1px solid rgba(212, 175, 55, 0.2); margin: 30px 0;">
+
+                <!-- الاستدلال السادس -->
+                <div style="color: var(--gold-bright); font-size: 1.5rem; margin: 25px 0 15px;">الاستدلال السادس: رواية سالم بن قبيصة</div>
+                <p>عن سالم بن قبيصة قال: شهدت علي بن الحسين (عليه السلام) وهو يقول: «أنا أول من خلق الأرض، وأنا آخر من يهلكها»<span class="ref-tag">[33]</span>.</p>
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 15px; margin: 20px 0; border-right: 4px solid var(--gold-primary);">
+                    <strong style="color: var(--gold-bright);">الرد على وجهين:</strong>
+                    <p><strong>الوجه الأول:</strong> تعارض هذه الرواية مع الروايات الكثيرة الدالة على أن الله هو الخالق لكل شيء.</p>
+                    <p><strong>الوجه الثاني:</strong> الرواية تتحدث عن خلق الأرض فقط، وليس الكون بأسره. فلا دليل فيها على أنهم خلقوا كل شيء.</p>
+                </div>
+
+                <p>وفي نهاية هذا الباب، أقول: سيجد بعض الغلاة أن ردي على بعض هذه الشبهات قد يبدو ضعيفًا في نظرهم، لكني أذكّرهم بما روي عن المعلى بن خنيس قال: قلت لأبي عبد الله (عليه السلام): إذا جاء حديث عن أولكم وحديث عن آخركم بأيهما نأخذ؟ فقال: «خذوا به حتى يبلغكم عن الحي، فإن بلغكم عن الحي فخذوا بقوله». قال: ثم قال أبو عبد الله (عليه السلام): «إنا والله لا ندخلكم إلا فيما يسعكم». وفي حديث آخر: «خذوا بالأحدث»<span class="ref-tag">[34]</span>. وعن الحسين بن المختار عن بعض أصحابنا عن أبي عبد الله (عليه السلام) قال: «أرأيتك لو حدثتك بحديث العام ثم جئتني من قابل فحدثتك بخلافه، بأيهما كنت تأخذ؟ قال: قلت: كنت آخذ بالأخير. فقال لي: رحمك الله»<span class="ref-tag">[35]</span>.</p>
+
+                <p>فالعمل يكون بالرواية الأحدث صدورًا. فالآن ننظر إلى رواية الإمام المهدي (عجل الله تعالى فرجه) الذي هو آخر الأئمة وخاتمهم.</p>
+
+                <p>قال الإمام المهدي (عجل الله تعالى فرجه): «إن الله تعالى هو الذي خلق الأجسام وقسم الأرزاق، لأنه ليس بجسم ولا حال في جسم، ليس كمثله شيء وهو السميع العليم، وأما الأئمة (عليهم السلام) فإنهم يسألون الله تعالى فيخلق، ويسألونه فيرزق، إيجابًا لمسألتهم وإعظامًا لحقهم»<span class="ref-tag">[36]</span>.</p>
+
+                <p>فبهذا التصريح من الإمام الحجة (عجل الله فرجه) تسقط كل رواية تخالفه وتدعي التفويض بالخلق والرزق للأئمة بشكل مستقل، لأن روايته هي الأحدث صدورًا.</p>
+
+                <p>حدثنا محمد بن علي ماجيلويه (ره) قال: حدثنا علي بن إبراهيم بن هاشم عن أبيه عن ياسر الخادم قال: قلت للرضا (عليه السلام) ما تقول في التفويض؟ فقال: «إن الله تبارك وتعالى فوض إلى نبيه (صلى الله عليه وآله) أمر دينه فقال: "مَا آتَاكُمُ الرَّسُولُ فَخُذُوهُ وَمَا نَهَاكُمْ عَنْهُ فَانتَهُوا"<span class="ref-tag">[37]</span>، فأما الخلق والرزق فلا»<span class="ref-tag">[38]</span>.</p>
+
+                <p>حدثنا تميم بن عبد الله بن القرشي (رضي الله عنه) قال: عن بريد بن عمير بن معاوية الشامي قال: دخلت على علي بن موسى الرضا (عليه السلام) بمرو فقلت له: يا بن رسول الله، روي لنا عن الصادق جعفر بن محمد (عليهما السلام) قال: «إنه لا جبر ولا تفويض بل أمر بين أمرين، فما معناه؟ قال: من زعم أن الله يفعل أفعالنا ثم يعذبنا عليها فقد قال بالجبر، ومن زعم أن الله عز وجل فوض أمر الخلق والرزق إلى حججه (عليهم السلام) فقد قال بالتفويض، والقائل بالجبر كافر، والقائل بالتفويض مشرك. فقلت له: يا بن رسول الله فما أمر بين أمرين؟ فقال: وجود السبيل إلى إتيان ما أمروا به وترك ما نهوا عنه. فقلت له: فهل لله عز وجل مشية وإرادة في ذلك؟ فقال: فأما الطاعات فإرادة الله ومشيئته فيها الأمر بها والرضا لها والمعاونة عليها، وإرادته ومشيئته في المعاصي النهي عنها والسخط لها والخزلان عليها. قلت: فهل لله فيها القضاء؟ قال: نعم، ما من فعل يفعله العباد من خير أو شر إلا ولله فيه قضاء. قلت: ما معنى هذا القضاء؟ قال: الحكم عليهم بما يستحقونه على أفعالهم من الثواب والعقاب في الدنيا والآخرة»<span class="ref-tag">[39]</span>.</p>
+
+                <p>فالخلاصة: تسقط كل روايات التفويض المزعومة، كرواية "أنا أول من خلق الأرض وآخر من يهلكها"، وتفسيرهم الباطل لجمع القرآن، وقصة فضة وقنبر، وغيرها. الحاصل: سقوط عقيدتكم أيها المغالية.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- الخاتمة -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">الخاتمة</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>هذه الرسالة ردت على بعض شبهات الغلاة، وليس كلها، وردت على أكثر الروايات التي يحتجون بها. فلو قرأ المغالي والمفوض هذه الرسالة بنية الهداية والإنصاف، فسوف يقتنع إن شاء الله. أما من لديه جهل مركب وتعصب أعمى، فسوف يرفضها، وهو في الحقيقة لم يرفض كلامي، بل سوف يرفض كلام العترة الطاهرة (عليهم السلام).</p>
+                <p style="margin-top: 30px; font-size: 1.3rem; font-family: 'Amiri'; text-align: left;">وكتب: محمد المهدي بن علي الموسوي</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- قائمة الحواشي كاملة -->
+    <div class="issue-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+            <h2 class="card-title">الهوامش</h2>
+            <i class="fas fa-chevron-down expand-icon"></i>
+        </div>
+        <div class="answer-body">
+            <div class="answer-inner">
+                <p>[1] بحار الأنوار - العلامة المجلسي - ج 5 - ص 20</p>
+                <p>[2] الاعتقادات في دين الإمامية - الشيخ الصدوق - ص 10</p>
+                <p>[3] التوحيد - الشيخ الصدوق - ص 68</p>
+                <p>[4] المصدر نفسه</p>
+                <p>[5] المصدر نفسه</p>
+                <p>[9] المصدر السابق</p>
+                <p>[10] سورة الزمر، الآية 6</p>
+                <p>[11] المصدر السابق</p>
+                <p>[12] سورة المؤمنون، الآية 14</p>
+                <p>[13] سورة الرعد، الآية 16</p>
+                <p>[14] سورة التحريم، الآية 6 (جزء منها)</p>
+                <p>[15] سورة الحجر، الآية 16</p>
+                <p>[16] صحيفة الأبرار - ميرزا محمد تقي - ج 2، ص 511</p>
+                <p>[17] سورة الحشر، الآية 7</p>
+                <p>[18] عيون أخبار الرضا (ع) - الشيخ الصدوق - ج 2، ص 342</p>
+                <p>[19] المصدر نفسه</p>
+                <p>[20] سورة الرعد، الآية 16</p>
+                <p>[21] المصدر السابق</p>
+                <p>[22] المصدر السابق</p>
+                <p>[23] تفسير القمي - ج 2، ص 332</p>
+                <p>[24] لم يذكر المصدر في النص الأصلي</p>
+                <p>[25] لم يذكر المصدر في النص الأصلي</p>
+                <p>[26] لم يذكر المصدر في النص الأصلي</p>
+                <p>[27] لم يذكر المصدر في النص الأصلي</p>
+                <p>[28] سورة البقرة، الآية 135</p>
+                <p>[29] سورة الأنعام، الآية 23</p>
+                <p>[30] سورة المائدة، الآية 44 (جزء منها)</p>
+                <p>[31] سورة البقرة، الآية 14</p>
+                <p>[32] لم يذكر المصدر في النص الأصلي</p>
+                <p>[33] لم يذكر المصدر في النص الأصلي</p>
+                <p>[34] وسائل الشيعة - ج 27، ص 106</p>
+                <p>[35] المصدر نفسه</p>
+                <p>[36] الاحتجاج - الشيخ الطبرسي - ج 2، ص 530</p>
+                <p>[37] سورة الحشر، الآية 7</p>
+                <p>[38] عيون أخبار الرضا (ع) - ج 2، ص 342</p>
+                <p>[39] المصدر نفسه</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== قسم الذكاء الاصطناعي المتطور ========== -->
+<section id="ai" class="section-view">
+    <div class="back-button" onclick="showPortal()">
+        <i class="fas fa-arrow-right"></i> العودة إلى البوابة
+    </div>
+    <div class="ai-container">
+        <div class="ai-header">
+            <div class="ai-badge"><i class="fas fa-bolt"></i> النسخة المتطورة 3.0</div>
+            <h2><i class="fas fa-brain"></i> الباحث العقائدي الذكي <span class="ai-glow-text">AI</span></h2>
+            <p>اسأل عن أي مسألة عقائدية، وسأجيبك بالأدلة من الكتاب والعترة</p>
+        </div>
+        <div class="ai-status-bar">
+            <div class="ai-status-item"><i class="fas fa-database"></i> قاعدة معرفية: <span id="knowledgeBaseCount">22</span> مسألة</div>
+            <div class="ai-status-item"><i class="fas fa-history"></i> محادثة ذكية</div>
+        </div>
+        <div class="ai-chat-container">
+            <div class="ai-messages" id="aiMessages">
+                <div class="message ai">
+                    <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                    <div class="message-content">
+                        <p>🌙 <strong>السلام عليكم ورحمة الله وبركاته</strong></p>
+                        <p>أنا <strong>الباحث الذكي أبو الطيبات AI</strong>، الإصدار المتطور 3.0.</p>
+                        <p>📚 <strong>مجالات الإجابة:</strong> التوحيد - الرد على المفوضة - معجزات الأئمة - نفي الصفات - الواسطة في الخلق - التفويض - وغيرها.</p>
+                        <p>💡 <strong>مثال:</strong> <span class="ai-suggestion-chip" onclick="askAI('ما هو التوحيد؟')"><i class="fas fa-star"></i> ما هو التوحيد؟</span> أو <span class="ai-suggestion-chip" onclick="askAI('الرد على المفوضة')"><i class="fas fa-shield"></i> الرد على المفوضة</span></p>
+                        <div class="message-time">الآن</div>
+                        <div class="message-actions">
+                            <span class="message-action-btn" onclick="copyToClipboard(this)" title="نسخ الإجابة"><i class="fas fa-copy"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-suggestions-live" id="aiSuggestionsLive" style="display: none;">
+                <i class="fas fa-lightbulb"></i>
+                <span id="suggestionText"></span>
+            </div>
+            <div class="ai-input-area">
+                <div class="ai-input-wrapper">
+                    <input type="text" id="aiQuestion" placeholder="اكتب سؤالك هنا... مثال: ما هو التوحيد?" autocomplete="off" onkeyup="handleTyping(event)" onkeypress="if(event.key==='Enter') sendQuestion()">
+                    <button onclick="sendQuestion()" id="sendButton" title="إرسال"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <div class="ai-suggestions">
+                    <span class="ai-suggestion-chip" onclick="askAI('ما هو التوحيد؟')"><i class="fas fa-star"></i> التوحيد</span>
+                    <span class="ai-suggestion-chip" onclick="askAI('الرد على المفوضة')"><i class="fas fa-shield"></i> الرد على المفوضة</span>
+                    <span class="ai-suggestion-chip" onclick="askAI('هل الأئمة يخلقون؟')"><i class="fas fa-question-circle"></i> هل الأئمة يخلقون؟</span>
+                    <span class="ai-suggestion-chip" onclick="askAI('الواسطة في الخلق')"><i class="fas fa-link"></i> الواسطة في الخلق</span>
+                    <span class="ai-suggestion-chip" onclick="askAI('نفي الصفات عن الله')"><i class="fas fa-ban"></i> نفي الصفات</span>
+                    <span class="ai-suggestion-chip" onclick="askAI('معجزات الأئمة')"><i class="fas fa-magic"></i> معجزات الأئمة</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>الموسوعة العقائدية الذهبية | إعداد سيد محمد الصادق الموسوي © 2026</p>
+    <p style="font-size: 0.9rem; margin-top: 15px; color: var(--gold-rich);">✦ موسوعة محققة بالأدلة القاطعة ✦</p>
+</footer>
+
+<script>
+    // إظهار البوابة وإخفاء جميع الأقسام
+    function showPortal() {
+        document.getElementById('portal').style.display = 'flex';
+        document.querySelectorAll('.section-view').forEach(s => s.classList.remove('active'));
+    }
+
+    // إظهار قسم معين وإخفاء البوابة
+    function showSection(id) {
+        document.getElementById('portal').style.display = 'none';
+        document.querySelectorAll('.section-view').forEach(s => s.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        window.scrollTo(0, 0);
+    }
+
+    // دالة فتح وإغلاق البطاقات
+    function toggleCard(card) {
+        card.classList.toggle('open');
+    }
+
+    // دالة البحث
+    function runSearch(val) {
+        const cards = document.querySelectorAll('#main-list .issue-card');
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            card.style.display = text.includes(val.toLowerCase()) ? 'block' : 'none';
+        });
+    }
+
+    // دوال الذكاء الاصطناعي
+    const aiKnowledgeBase = [
+        {
+            keywords: ['توحيد', 'الله', 'خالق', 'خلق', 'احد', 'صمد'],
+            question: 'ما هو التوحيد؟',
+            answer: 'التوحيد هو إفراد الله سبحانه وتعالى بالعبادة والربوبية والأسماء والصفات. قال الإمام الصادق عليه السلام: "في الربوبية العظمى والالهية الكبرى لا يكون الشيء لا من شيء الا الله ولا ينقل الشيء من جوهريته الى جوهر اخر الا الله".'
+        },
+        {
+            keywords: ['مفوض', 'مفوضة', 'تفويض', 'الرب', 'الخالق'],
+            question: 'الرد على المفوضة',
+            answer: 'المفوضة هم الذين يزعمون أن الله فوض الأمر للأئمة عليهم السلام في الخلق والرزق. والرد عليهم من كلام أمير المؤمنين عليه السلام حيث قال للغلاة: "ويلكم لا تفعلوا إنما أنا مخلوق مثلكم... ربي وربكم الله".'
+        },
+        {
+            keywords: ['ائمة', 'يخلقون', 'خلق', 'رزق', 'رازقين'],
+            question: 'هل الأئمة يخلقون؟',
+            answer: 'لا، الأئمة عليهم السلام لا يخلقون ولا يرزقون. قال الإمام الرضا عليه السلام: "لا تكون المعجزات فعله، فعلم بهذا أن الذي أظهر المعجزات إنما كانت من فعل القادر الذي لا يشبه المخلوقين".'
+        },
+        {
+            keywords: ['واسطة', 'وسائط', 'سبب', 'بسبب'],
+            question: 'الواسطة في الخلق',
+            answer: 'الواسطة في الخلق منفية بالإجماع وبتواتر النقل. قال العلامة الحلي: "الواسطة ممكنة لاستحالة تعدد الواجب لذاته فهى من جملة ما سوى الله وثبوت واسطة بين وجود الله تعالى ووجود ما سواه غير معقول".'
+        },
+        {
+            keywords: ['نفي', 'صفات', 'الصفات', 'كمال الاخلاص'],
+            question: 'نفي الصفات عن الله',
+            answer: 'ليس المراد بنفي الصفات عن الله نفيها مطلقاً، بل نفي الصفات التي تقتضي التجزئة والتشبيه. قال أمير المؤمنين عليه السلام: "فمن وصف الله سبحانه فقد قرنه، ومن قرنه فقد ثناه، ومن ثناه فقد جزأه".'
+        },
+        {
+            keywords: ['معجزة', 'معجزات', 'كرامات', 'خوارق'],
+            question: 'معجزات الأئمة',
+            answer: 'ما يظهر على أيدي الأئمة عليهم السلام من معجزات وكرامات إنما هي من فعل الله تعالى، تجري على أيديهم إكراماً لهم وإثباتاً لحجتهم. كما قال الإمام الرضا عليه السلام: "الذي أظهر المعجزات إنما كانت من فعل القادر الذي لا يشبه المخلوقين".'
+        }
+    ];
+
+    let typingTimer;
+    const knowledgeBaseCount = document.getElementById('knowledgeBaseCount');
+    if (knowledgeBaseCount) knowledgeBaseCount.textContent = aiKnowledgeBase.length;
+
+    function sendQuestion() {
+        const input = document.getElementById('aiQuestion');
+        const question = input.value.trim();
+        if (question === '') return;
+        addMessage('user', question);
+        input.value = '';
+        const sendButton = document.getElementById('sendButton');
+        sendButton.disabled = true;
+        const thinkingMsg = addThinkingIndicator();
+        setTimeout(() => {
+            removeThinkingIndicator(thinkingMsg);
+            const aiAnswer = getAIAnswer(question);
+            addMessage('ai', aiAnswer);
+            sendButton.disabled = false;
+        }, 1500);
+    }
+
+    function addThinkingIndicator() {
+        const messagesDiv = document.getElementById('aiMessages');
+        const thinkingDiv = document.createElement('div');
+        thinkingDiv.className = 'message ai thinking-message';
+        thinkingDiv.id = 'thinking-indicator';
+        thinkingDiv.innerHTML = `
+            <div class="message-avatar"><i class="fas fa-robot"></i></div>
+            <div class="message-content"><div class="ai-thinking"><i class="fas fa-circle-notch"></i> جاري البحث في الموسوعة العقائدية...</div></div>
+        `;
+        messagesDiv.appendChild(thinkingDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        return thinkingDiv;
+    }
+
+    function removeThinkingIndicator(element) {
+        if (element && element.parentNode) element.parentNode.removeChild(element);
+    }
+
+    function askAI(question) {
+        document.getElementById('aiQuestion').value = question;
+        sendQuestion();
+    }
+
+    function addMessage(type, content) {
+        const messagesDiv = document.getElementById('aiMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${type}`;
+        const time = new Date().toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+        const paragraphs = content.split('\n').filter(p => p.trim() !== '');
+        const contentHtml = paragraphs.map(p => `<p>${p}</p>`).join('');
+        if (type === 'user') {
+            messageDiv.innerHTML = `<div class="message-avatar"><i class="fas fa-user"></i></div><div class="message-content">${contentHtml}<div class="message-time">${time}</div></div>`;
+        } else {
+            messageDiv.innerHTML = `<div class="message-avatar"><i class="fas fa-robot"></i></div><div class="message-content">${contentHtml}<div class="message-time">${time}</div><div class="message-actions"><span class="message-action-btn" onclick="copyToClipboard(this)" title="نسخ الإجابة"><i class="fas fa-copy"></i></span></div></div>`;
+        }
+        messagesDiv.appendChild(messageDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    function copyToClipboard(btn) {
+        const messageContent = btn.closest('.message-content').querySelector('p').innerText;
+        navigator.clipboard.writeText(messageContent).then(() => {
+            const notification = document.createElement('div');
+            notification.className = 'copy-notification';
+            notification.textContent = '✅ تم نسخ الإجابة';
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 2000);
+        });
+    }
+
+    function getAIAnswer(question) {
+        const q = question.toLowerCase();
+        const words = q.split(' ').filter(w => w.length > 2);
+        let bestMatch = null;
+        let maxScore = 0;
+        for (const item of aiKnowledgeBase) {
+            let score = 0;
+            for (const keyword of item.keywords) {
+                if (q.includes(keyword)) score += 10;
+                for (const word of words) {
+                    if (keyword.includes(word) || word.includes(keyword)) score += 5;
+                }
+            }
+            if (q.includes(item.question.toLowerCase().slice(0, 15))) score += 15;
+            if (score > maxScore) {
+                maxScore = score;
+                bestMatch = item;
+            }
+        }
+        if (bestMatch && maxScore > 5) {
+            return bestMatch.answer + '\n\n📚 (المصدر: الموسوعة العقائدية - الباحث أبو الطيبات)';
+        } else {
+            return "عذراً، لم أجد إجابة محددة لسؤالك في قاعدة المعرفة. يمكنك البحث في الموسوعة أعلاه أو صياغة السؤال بطريقة مختلفة. إليك بعض الأسئلة المقترحة:\n\n• ما هو التوحيد؟\n• الرد على المفوضة\n• هل الأئمة يخلقون؟\n• نفي الصفات عن الله\n• معجزات الأئمة\n• الواسطة في الخلق";
+        }
+    }
+
+    function handleTyping(event) {
+        clearTimeout(typingTimer);
+        const input = event.target.value.trim();
+        const suggestionsLive = document.getElementById('aiSuggestionsLive');
+        const suggestionText = document.getElementById('suggestionText');
+        if (input.length > 2) {
+            typingTimer = setTimeout(() => {
+                let found = null;
+                for (const item of aiKnowledgeBase) {
+                    for (const keyword of item.keywords) {
+                        if (input.includes(keyword) || keyword.includes(input)) {
+                            found = item;
+                            break;
+                        }
+                    }
+                    if (found) break;
+                }
+                if (found) {
+                    suggestionText.textContent = `اقتراح: ${found.question}`;
+                    suggestionsLive.style.display = 'flex';
+                } else {
+                    suggestionsLive.style.display = 'none';
+                }
+            }, 500);
+        } else {
+            suggestionsLive.style.display = 'none';
+        }
+    }
+
+    window.onscroll = function() {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>
